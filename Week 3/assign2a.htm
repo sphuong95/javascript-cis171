@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>assign2a.htm</title>
+	<script type="text/javascript">  
+		var numHours, hourlyRate, salary;
+		numHours = prompt("How many hours did you work this week?");
+		hourlyRate = prompt("How much do you get paid per hour?");
+		if (numHours && hourlyRate) {
+			if (numHours <= 40 && numHours >= 0) {
+				salary = numHours * hourlyRate;
+				alert("Your Total Salary this week is $" + salary);
+		}
+			else if (numHours > 40 && numHours >= 0) {
+				salary = 40 * hourlyRate;
+				var overTimeRate = 1.5 * (numHours - 40) * hourlyRate;
+				salary += overTimeRate;
+				
+				alert("Your Total Salary this week is $" + salary);
+			}
+		}
+		
+	</script>
+</head>
+<body>
+</body>
+</html>

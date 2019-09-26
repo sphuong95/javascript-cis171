@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> To-Do List</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+			background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(&#039;bul.gif&#039;);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin:.5in 20%; font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: &#039;courier new&#039;;
+		font-size: 14pt;
+		background-image: url(&#039;codeback.jpg&#039;);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin:.5in 20%; background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(&#039;codeback2.jpg&#039;);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in
+	}
+		h1{text-align: center}
+</style>
+</head>
+<body>
+<br />
+<h1><span>Introduction to <span>JavaScript</span></span></h1>
+<h2 style="text-align: center;"><b>[</b><b><a style="color: #800000;" href="#Introduction_">Introduction</a>] | [</b><a href="#Comments"><b>Comments</b></a>] | [<b><a href="#Writing_Valid_JS_Code">Writing Valid JS Code</a></b>]<br /> <br /> <b>[<a style="color: #800000;" href="#Structure_of_JavaScript_"><span>Structure of <span>JavaScript</span></span></a>] |</b><b> [</b><b><a style="color: #800000;" href="#LOGICANDDEBUGGING">Logic and Debugging</a>] </b></h2>
+<hr />
+<h2><b> <a id="Introduction_"></a>Introduction</b></h2>
+<p><span>The &lt;script&gt; tag is used to create <span>JavaScript</span> tags inside a web page. The </span><b>type </b>attribute which specifies the type of information included in the script should equal to <b><span>text/<span>javascript</span>.</span></b><span> You include the following code in a document to tell Web browser the statements that follow must be interpreted by <span>JavaScript</span> scripting engine:</span></p>
+<p class="code"><span>&lt;script type="text/<span>javascript</span>"&gt;</span><br />     Statements                 <br /> &lt;/script&gt;                      </p>
+<p style="margin-left: 0in; text-indent: 0in; line-height: 150%;" class="MsoNormal"><span><span>JavaScript</span> is a </span><b>case sensitive</b> language. Using the wrong case for an object or method will generate an error message. </p>
+<h2><br /> <a id="Comments"></a><span> Comments in <span>JavaScript</span></span></h2>
+<p><b>Comments</b><span> are programming remarks that a programmers inserts into a program's source. The comments that you add to your <span>JavaScript</span> statements have no effect on your codes, and the <span>JavaScript</span> interpreter ignores them completely. <span>JavaScript</span> supports two types of comments:  </span></p>
+<ul>
+<li>
+<p><b> </b><b> // for a single line comment  <br />  </b></p>
+</li>
+<li>
+<p><b>/*     <br />. . . .                                                                             <br />*/    for multi-line comments (block comments) </b></p>
+<p> </p>
+</li>
+</ul>
+<p>Example:</p>
+<p class="code"><b>&lt;script </b> <b><span>type="text/<span>javascript</span>"&gt;  </span></b>   <br /><span>      // Pam <span>Barvarz</span></span><br /> &lt;/script&gt;</p>
+<p class="code">&lt;script&gt; <br /><span>           /* Pam  <span>Barvarz</span></span><br />              OCC<br />              Fall 2011  */<b>    &lt;/script&gt;            </b>                   </p>
+<p><a style="color: #800000;" href="#top"> [TOP]</a></p>
+<hr />
+<h2><a id="Writing_Valid_JS_Code"></a>Writing Valid JS Code</h2>
+<p>If you were to validate an XHTML document containing a script section, the document would not validate successfully. The reason is that in an XHTML document, the statements in a &lt;script&gt; element are treated as parsed character data (<strong>PCDATA</strong>,) which identifies a section of a document that is<b> </b>interpreted as <b>markup</b>. As a result, if you attempt to validate an XHTML document that contains a script section, it might fail the validation.</p>
+<p>To solve this issue, you have two options:</p>
+<ol>
+<li>
+<p><span>Moving the <span>JavaScript</span> code into a source file.</span></p>
+</li>
+<li>
+<p>Enclosing the code within a &lt;script&gt; element within a<strong> CDATA </strong>section, which marks sections of a document as character data, or CDATA. Any sections marked as CDATA will<strong> not be interpreted </strong>as markup. To mark your codes as CDATA, you need to use the following syntax:</p>
+<p class="style2" style="line-height: 150%;">&lt;![CDATA[<br /><span>       <span>JavaScript</span> statements</span><br /> ]]&gt;</p>
+</li>
+</ol>
+<p><span>When the browser detects the script tags, it executes the statements one line after the other assuming all the statements are <span>JavaScript</span> statements. When the <span>JavaScript</span> interpreter gets to the </span><strong>&lt;! CDATA[    </strong>and <strong>   ]]&gt;</strong> codes it will detect those as errors. To fix this issue you should mark the <strong>&lt;! CDATA[  </strong>and <strong> ]]&gt;</strong><span> portions of the CDATA section as <span>JavaScript</span> comments as shown below:</span></p>
+<p class="code"><b>&lt;script </b><span>type="text/<span>javascript</span>"</span><b>&gt; <br />      /*  &lt;![CDATA[  */<br /><span>          <span>JavaScript</span> <span>Statemets</span></span><br />      /* ]]&gt; */<br /> &lt;/script&gt;                                        </b></p>
+<p><span><span>JavaScript</span> is considered an object-based programming language.  An </span><b>object</b> is  a programming code and data that can be treated as individual unit or component.  An example of an object is the <b>document </b>object.  A <b>method</b> is an action that can be performed with or on an object.  An example of a method is the <b>write()</b> method.  You can use the write() method to write contents to the screen. Method ids are listed after the object ids, and every method id is followed by a pair of <b>parentheses</b>. Inside the parentheses, you need to insert <b>arguments.</b> Arguments are the information that the method needs. For example, the write() method requires a text string as its argument. </p>
+<p style="margin-left: 0in; text-indent: 0in; line-height: 150%;" class="MsoNormal">The only reason to use the write() method is to add new text to a Web page while it is being rendered.  Remember that the write()  method require a <b>text string</b> as an argument.</p>
+<p><b> Example:             </b><b> </b></p>
+<p> </p>
+<p class="code"><b>&lt;script </b><span>type="text/<span>javascript</span>"</span><b>&gt; </b><br />      document.write("Welcome to OCC!");<br /> &lt;/script&gt;  </p>
+<p><span>As shown in the example, a <span>JavaScript</span> statement is terminated with a </span><b>semicolon</b>.</p>
+<p><b>Practice: </b><span>Create a <span>JavaScript</span> statement that displays three messages on the screen.  Discuss your observations in the </span><b>Unit 1</b> forum of the Discussion area.</p>
+<p><a style="color: #800000;" href="#top"> [TOP]</a></p>
+<p> </p>
+<hr />
+<h2><a id="Structure_of_JavaScript_"></a><span>Structure of <span>JavaScript</span></span></h2>
+<p>Scripts can be added to a Web page in one of three places:</p>
+<ol>
+<li>
+<p><b>External file</b><span> (source file). A <span>JavaScript</span> source file is usually designated by the file extension </span><b><i><span>.<span>js</span></span></i></b><span> and contains only <span>JavaScript</span> statements; it does not contain a &lt;script&gt; element. <span>JavaScript</span> source files cannot include XHTML or </span><b>HTML elements.</b></p>
+</li>
+<li>
+<p><b>Head </b>section</p>
+</li>
+<li>
+<p><b>Body</b> section</p>
+</li>
+</ol>
+<p>Each has advantages and disadvantages. Scripts placed in an external file can be easily reused on multiple pages. If those pages are all part of the same site, download time is decreased because the scripts only download when the first page requests them. After that, they're stored in the browser's cache. The disadvantage of external scripts is that any modifications must be tested on all the Web pages that use them.</p>
+<p style="text-align: justify; line-height: 150%;" class="MsoNormal">Scripts placed in the head section are loaded before the content in the &lt;body&gt; section, meaning they are guaranteed to be present, when called from inside the body. When scripts are placed in the head section, they are easier to find when navigating code because they're all in one location.</p>
+<p style="text-align: justify; line-height: 150%;" class="MsoNormal">The body section is the least preferred location for scripts. The only advantage to body scripts is that their code is usually near the location where they are called, making code tracing a little easier. One disadvantage of body scripts is that a script may not finish loading before the viewer triggers some event that calls the scripts. If that happens, the page usually crashes. Another disadvantage is that body scripts can be hard to locate within large page files. Both body and head scripts download with their pages, so any code that's repeated across multiple pages will be downloaded every time it shows up instead of being cached. This means that download size and time for the pages will be larger than if the scripts were placed in external files.</p>
+<p>Remember that when including multiple script sections in a document, you must include a &lt;script&gt; element for each section.</p>
+<p> </p>
+<p><a style="color: #800000;" href="#top"> [TOP]</a></p>
+<p> </p>
+<hr />
+<h2><a id="LOGICANDDEBUGGING"></a>LOGIC AND DEBUGGING</h2>
+<p><span>Every language (including <span>JavaScript</span>) has its own rules, called </span><b>syntax</b>. <b>Logic </b>refers to the order in which various parts of a program run, or execute. You need to use the correct syntax and follow the correct logic in order for your programs to work correctly. If you have an incorrect syntax or you did not follow the logic correctly, you end up with errors, also called bugs.</p>
+<h3><span>Important Notes about <span>JavaScript</span></span></h3>
+<p><span>Because <span>JavaScript</span> is an interpreted language, it is more forgiving than compiled languages such as C++ or Java. Even though it is flexible, <span>JavaScript</span> has a set of syntax rules that must be obeyed. The most basic rules are:</span></p>
+<ol>
+<li>
+<p><span><span>JavaScript</span> is</span><b> case-sensitive </b>and most of its reserved words are in lowercase.</p>
+</li>
+<li>
+<p>All strings must be enclosed in <b>quotations</b>.</p>
+</li>
+<li>
+<p><span><span>JavaScript</span> commands end with a </span><b>semicolon</b>, just like C++ and Java.</p>
+</li>
+</ol>
+<p>Unfortunately, you cannot always rely on the line number.  Sometimes the errors come from the previous lines of your codes, but checking the line number is the start in finding your errors.</p>
+<p><a style="color: #800000;" href="#top"> [TOP]</a></p>
+<p> </p>
+<hr />
+<p> </p>
+<p> </p>
+<h2> </h2>
+<p class="code"> </p>
+</body>
+</html>

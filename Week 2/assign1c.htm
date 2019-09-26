@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <!--Create a Web page that asks users for the values of three variables and calculates the average of those three values. The program should then display the average in an alert box. Name the Web page assign1a.htm.-->
+  <title>assign1c.htm</title>
+  <script type="text/javascript">
+            function calcBMI(weight, height) {
+               return (weight*703)/(height*height);
+            }
+
+</script>
+</head>
+<body>
+  <script type="text/javascript">
+    var userWeight = prompt("Enter your weight in pounds");
+    var userHeight = prompt("Enter your height in inches");
+    var userBMI = calcBMI(parseFloat(userWeight), parseFloat(userHeight));
+    document.write("Your weight is " + userWeight + " lbs.</br>");
+	document.write("Your height is " + userHeight + " inches. </br>");
+	document.write("Your BMI is " + userBMI);
+</script> 
+</body>
+</html>

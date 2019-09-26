@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>assign3b.htm</title>
+  <script type="text/javascript">
+	function displayList (listOf) {
+		for (var i=0; i < listOf.length; i++) {
+			document.write("There is a " + listOf[i] + ".</br>");
+		}
+	}	
+	</script>
+  
+</head>
+<body>
+	<p>There are many types of dogs.</p>
+	<script type="text/javascript">
+		var animalList = new Array("Floof", "Woofer", "Doge", "Doggo", "Corgo");
+		displayList(animalList);
+		document.write("But there's more!</br></br>");
+		animalList.push("Shiber", "Yapper");
+		animalList.sort();
+		document.write("Here's a longer list in alphabetical order!</br>");
+		displayList(animalList);	
+	</script>
+</body>
+</html>

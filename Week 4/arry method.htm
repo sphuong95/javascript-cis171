@@ -1,0 +1,323 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Array Methods</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1 {text-align: center}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: 'courier new';
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	h1 { text-align:center}
+</style>
+
+</head>
+
+<body>
+<h1><a name="top"></a>Manipulating Arrays</h1>
+<h2 style="text-align:center"><b>[<a href="#unshift_method_">unshift</a>] | [<a href="#shift_method_">shift</a>] | [<a href="#push_method_">push</a>]</b> <br /> <br /> [<b><a href="#Sorting_Arrays">sort</a></b>] |<b> 
+[</b><b><a href="#concat_Method_">concat</a></b>] |<b> [<a href="#pop_method_">pop</a>] | [<a href="#split_method">split</a>] | [<a href="#join_Method_">join</a>] </b></h2>
+<hr>
+
+<p>Arrays have a property named <b>length</b> and various methods which will be discussed in this lecture. </p>
+
+<h2><a name="unshift_method_"></a>unshift Method </h2>
+
+<p>The <b>unshift</b> method allows you to add elements to the <b>beginning</b> of an array. The syntax of the unshift method is as follows:</p>
+
+
+<p><b><i>arrayName.unshift(newElement, newElement, ....)</i></b></p>
+
+
+<p><b>Example: </b>Assume that you have an array name <i>items</i> that stores the stationary items a company sells. The items are: pens, pencils, erasers, and staplers. Add rulers and notebooks to the beginning of the items array using the <i>unshift </i>method.</p>
+
+<p class="code"><b>&lt;script type="text/javascript"&gt;<br /> 
+</b><b>        var items= new Array("Pens", "Pencils", "Erasers", "Staplers");<br />        items.unshift("Rulers", "Notebooks");<br />        document.write("&lt;h2&gt;We sell the following Items:&lt;/h2&gt;");<br />        for(var i=0; i&lt;items.length; ++i){<br />            document.write(items[i]+ "&lt;br&gt;");<br />        }<br />&lt;/script&gt;</b>
+<p><b>Result:</b></p><div class="result">
+<script type="text/javascript">/*<![CDATA[*/
+   var items= new Array("Pens", "Pencils", "Erasers", "Staplers");
+   items.unshift("Rulers", "Notebooks");
+   document.write("<h2>We sell the following Items:</h2>");
+   for(var i=0; i<items.length; ++i){
+   		document.write(items[i]+ "<br />");
+   }
+/*]]>*/</script>
+
+
+</div>
+
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+<h2><a name="shift_method_"></a>shift Method</h2>
+
+<p>The <b>shift</b> method removes the first element from the <b>beginning </b>of an array. The syntax of the shift method is as follows:</p>
+
+
+<p><b><i>arrayName.shift()</i></b></p>
+
+
+<p><b>Example: </b>Use the shift method to remove the first element from the <i>items </i>array.</p>
+
+
+
+<p class="code">
+	<b>
+	&lt;script type="text/javascript"&gt;<br /> </b><b>       var items= new Array("Pens", "Pencils", "Erasers", "Staplers");<br />         items.shift();<br />      
+	    document.write("&lt;h2&gt;We sell the following Items:&lt;/h2&gt;");<br />         for(var i=0; i&lt;items.length; ++i){<br /> 
+	             document.write(items[i]+ "&lt;br&gt;");<br />         }<br /> &lt;/script&gt;</b>
+<p><b> Result: </b> </p><div class="result">
+<script type="text/javascript">/*<![CDATA[*/
+   var items= new Array("Pens", "Pencils", "Erasers", "Staplers");
+   items.shift();
+   document.write("<h2>We sell the following Items:</h2>");
+   for(var i=0; i<items.length; ++i){
+   		document.write(items[i]+ "<br />");
+   }
+/*]]>*/</script>
+</div>
+
+
+
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+<h2><a name="push_method_"></a>push Method</h2>
+
+<p>The <b>push</b> method allows you to add elements to the <b>end </b>of an array. The syntax of the push method is as follows:</p>
+
+
+<p><b><i>arrayName.push(newElement, newElement, ....)</i></b></p>
+
+
+<p><b>Example: </b>Assume that you have an array name <i>items</i> that stores the stationary items a company sells. The items are: pens, pencils, erasers, and staplers. Add rulers and notebooks to the <i>end</i> of the items array using the<i> push </i>method.</p>
+
+<p> </p>
+
+
+<p class="code"><b>
+&lt;script type="text/javascript"&gt;<br /> </b><b>     var items= new Array("Pens", "Pencils", "Erasers", "Staplers");<br />         items.push("Rulers", "Notebooks");<br />         document.write("&lt;h2&gt;We sell the following Items:&lt;/h2&gt;");<br />         for(var i=0; i&lt;items.length; ++i){<br />             document.write(items[i]+ "&lt;br&gt;");<br />         }<br /> </b>  <b>  &lt;/script&gt;<br /> &nbsp;</b>
+</p><b>Result:</b><div class="result">
+<script type="text/javascript">/*<![CDATA[*/
+   var items= new Array("Pens", "Pencils", "Erasers", "Staplers");
+   items.push("Rulers", "Notebooks");
+   document.write("<h2>We sell the following Items:</h2>");
+   for(var i=0; i<items.length; ++i){
+   		document.write(items[i]+ "<br />");
+   }
+/*]]>*/</script>
+
+</div>
+
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+<h2><a name="pop_method_"></a>pop Method</h2>
+
+<p>The <b>pop</b> method removes the first element from the <b>end </b>of an array. The syntax of the pop method is as follows:</p>
+
+
+<p><b><i>arrayName.pop()</i></b></p>
+
+
+<p><b>Example: </b>Use the shift method to remove the last element from the <i>items </i>array.</p>
+
+
+
+<p class="code"><b>&lt;script type="text/javascript"&gt;<br />        var items= new Array("Pens", "Pencils", "Erasers", "Staplers");<br />      
+  items.pop();<br />        document.write("&lt;h2&gt;We sell the following Items:&lt;/h2&gt;");<br />    
+    for(var i=0; i&lt;items.length; ++i){<br />            document.write(items[i]+ "&lt;br&gt;");<br />      
+  }<br /> </b>
+<b> &lt;/script&gt;</b><br />&nbsp;</p>
+<b><br /> Result:</b> <div class="result">
+<script type="text/javascript">/*<![CDATA[*/
+   var items= new Array("Pens", "Pencils", "Erasers", "Staplers");
+   items.pop();
+   document.write("<h2>We sell the following Items:</h2>");
+   for(var i=0; i<items.length; ++i){
+   		document.write(items[i]+ "<br />");
+   }
+/*]]>*/</script>
+
+</div>
+
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+<h2><a name="Sorting_Arrays"></a>Sorting Arrays</h2>
+
+<p>You can use the<b> sort()</b> method to display an array in alphabetical order. The syntax of the sort method is as follows:</p>
+
+
+<p><b><i>arrayName.sort()</i></b></p>
+
+
+<p><b>Example: </b>Assume that you have an array named <i>familyMembers </i>which lists the members in your family. Use the sort() method to sort and display the family members in alphabetical order. The following example displays the codes for this scenario:</p>
+
+<p class="code">
+&lt;script type="text/javascript"&gt;<br /> <b>            familyMembers=new Array();<br />             familyMembers[0]="John";<br />             familyMembers[1]="Sally";<br />             familyMembers[2]="Pam";<br />             familyMembers[3]="Aaron";<br />             familyMembers[4]="Fred";<br />             familyMembers[5]="Jacqueline";<br />             familyMembers.sort();  // sorts the array<br />             for (var i=0; i&lt;6; ++i){<br />                     document.write("Member " + (i+1) + " is: " + familyMembers[i] + "&lt;br&gt;");<br />             }<br /> </b> <b> &lt;/script&gt;</b></p>
+
+
+
+<p><b>Result in ascending order: </b></p>
+<div class="result">
+<p><b>Member 1 is: Aaron<br /> Member 2 is: Fred<br /> Member 3 is: Jaqueline<br /> Member 4 is: John<br /> Member 5 is: Pam<br /> Member 6 is: Sally</b></p>
+</div>
+<p>The <b>reverse()</b> method lists the array members in the reverse order. To display the<i> familyMembers</i> array in descending order you should use the <i> reverse() </i>method.  By adding the <b>familyMembers.reverse()</b>  to the above example, the array members will display in descending order as shown below:</p>
+<p>Result in descending order:</p>
+
+<p class="result"><b>Member 1 is: Sally<br /> Member 2 is: Pam<br /> Member 3 is: John<br /> Member 4 is: Jacqueline<br /> Member 5 is: Fred<br /> Member 6 is: Aaron </b></p>
+
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+
+<h2><b><a name="concat_Method_"></a>concat Method</b></h2>
+
+<p>Sometimes you might want to combine the elements of various arrays into one array. The <b>concat </b>method allows you to combine arrays. </p>
+<p><b>Example: </b>Assume you want to combine the <i> familyMembers</i> and the<i> inLaws</i> arrays into a new array named <i> extendedFamily</i>.</p>
+ 
+<p class="code"><b><br /> &lt;script type="text/javascript"&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+familyMembers=new Array();<br />         familyMembers[0]="John";<br />         familyMembers[1]="Sally";<br />         familyMembers[2]="Pam";<br />         familyMembers[3]="Aaron";<br />         familyMembers[4]="Fred";<br />         familyMembers[5]="Jacqueline";<br /> <br />         inLaws= new Array();<br />         inLaws[0]="Ann";<br />         inLaws[1]="Jackson";<br />         inLaws[2]="Brian";<br />         inLaws[3]="Nicole";<br /> var extendedFamily=new Array();        extendedFamily=familyMembers.concat(inLaws);<br /> for (var i=0; i&lt;extendedFamily.length; ++i){<br /> &nbsp;&nbsp; document.write("Member " + (i+1) + " is: " + extendedFamily[i] + "&lt;br&gt;");<br /> &nbsp;}<br /> &lt;/script&gt;</b><br /> &nbsp;
+
+<p>   <b> </b><b> Result:</b></p>
+<p class="result">
+<script type="text/javascript">/*<![CDATA[*/
+familyMembers=new Array();
+            familyMembers[0]="John";
+            familyMembers[1]="Sally";
+            familyMembers[2]="Pam";
+            familyMembers[3]="Aaron";
+            familyMembers[4]="Fred";
+            familyMembers[5]="Jacqueline";
+            
+            inLaws= new Array();
+            inLaws[0]="Ann";
+            inLaws[1]="Jackson";
+            inLaws[2]="Brian";
+            inLaws[3]="Nicole";
+            
+            var extendedFamily=new Array();
+            extendedFamily=familyMembers.concat(inLaws);
+            
+            for (var i=0; i<extendedFamily.length; ++i){
+                    document.write("Member " + (i+1) + " is: " + extendedFamily[i] + "<br />");
+            }
+/*]]>*/</script>
+</p>
+
+
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+<h2><a name="split_method"></a>split Method</h2>
+
+<p>Sometimes you might want to convert a string in to an array. The <b>split</b> method allows you to convert a string into an array by specifying the character(s) that you want to use to convert the string into an array.  The syntax of the split method is as follows:</p>
+
+
+<p><b>array=string.split(seperator)</b></p>
+
+
+<p><b>Example:  </b>var myArray= mystring(", ");</p>
+<p>For example, if you have a list which uses commas to separate the list items, you can use the comma as the separator character. </p>
+
+<div class="code"><b>&lt;script type="text/javascript"&gt;<br /> </b><b>      &nbsp; var grades="A B C D F";<br />        var gradeArray=grades.split(" ");<br />        for (var i=0; i&lt;gradeArray.length; ++i){<br />            document.write(gradeArray[i]+ "&lt;br&gt;");<br />        }<br />&lt;/script&gt;</b></div>
+<b><br />Result:</b><br /><div class="result">
+<script type="text/javascript">/*<![CDATA[*/
+	var grades="A B C D F";
+	var gradeArray=grades.split(" ");
+	for (var i=0; i<gradeArray.length; ++i){
+		document.write(gradeArray[i]+ "<br />");
+	}
+	document.write("<br />");
+/*]]>*/</script>
+
+
+</div>
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+<h1><a name="join_Method_"></a>join Method</h1>
+
+<p>The <b>join </b>method allows you to combine an array elements into a string which is the opposite of what the split method does. When you use the join method, you can specify the separator which will be used to separate the elements of array. The syntax of the join method is as follows:</p>
+
+
+
+<p><b>array.join(separatorCharacter(s);</b></p>
+
+
+<p><b>Example: </b>Assume you want to convert the array named <i>items</i> into a string separated by the piping (|) character.</p>
+<p class="code"><b>
+&lt;script type="text/javascript"&gt;<br /> </b><b>&nbsp; var items= new Array("Pens", "Pencils", "Erasers", "Staplers");<br />&nbsp;&nbsp; var itemsPrint=items.join(" | ");<br />&nbsp;&nbsp; document.write(itemsPrint);<br /> &lt;/script&gt;</b></p>
+<br /><b>Result:</b>
+<p class="result"> 
+<script type="text/javascript">/*<![CDATA[*/
+   var items= new Array("Pens", "Pencils", "Erasers", "Staplers");
+   var itemsPrint=items.join(" | ");
+   document.write(itemsPrint);
+   
+/*]]>*/</script>
+</p>
+
+
+
+<p><b><a href="#top">[TOP]</a></b></p>
+
+<hr>
+</body>
+
+</html>

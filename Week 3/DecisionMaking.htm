@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> Decision Making</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: &#039;courier new&#039;;
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	
+</style>
+</head>
+<body>
+<br />
+<p style="line-height: 150%;"></p>
+<br />
+<hr />
+<h1 style="line-height: 150%; text-align: center;"><a name="top"></a>DECISION MAKING</h1>
+<p style="line-height: 150%;"></p>
+<br />
+<h2 style="text-align: center;">[<a href="#ifStatement">if Statement</a>] | [<a name="Comparison_and_Conditional_Operators�_0" href="#Comparison_and_Conditional_Operators�_">Comparison Operators</a>] | [<a href="#IfElseStatements">If ...else statements</a>]</h2>
+<p style="line-height: 150%;"></p>
+<h2><a name="ifStatement"></a>if Statement</h2>
+<p style="line-height: 150%;"></p>
+<p>The<b> </b><b>if </b>statement is one of the most common type of decision making statements. You use the if statement in JavaScript to make decisions. The ability to have a program make a decision and react accordingly is a key to writing flexible programs that can easily handle a range of scenarios.  The if statement<b> </b>is used to execute specific programming codes if the evaluation of a conditional expression returns a true value. The syntax for a simple if statement is as follows:</p>
+<p class="code">if(conditional expression){<br />        statements;<br /> }</p>
+<p><strong>Example:</strong></p>
+<p class="code">if (age&gt;=18){<br />    document.write("You are an adult"); <br /> }</p>
+<br />
+<p style="line-height: 150%;">
+<script type="text/javascript">/*<![CDATA[*/
+var Age=1; if (Age>=18) document.write("You are an adult");
+/*]]>*/</script>
+<b>Note:</b> Remember that Javascript statements are case sensitive, so if you change the capitalization of the if statement  you will get an error message. <img src="if-then.gif" align="right" alt="if" /></p>
+<p> </p>
+<br />
+<p>The if statement contains three parts: the keyword if, a <b>conditional expression</b> enclosed within parentheses, and <b>executable statements</b>. If the condition being evaluated returns a value of true, then the statement immediately following the conditional expression executes.</p>
+<p> </p>
+<br />
+<p>After an if  statement executes, any subsequent codes execute normally. You can use a command block to construct a decision-making structure using multiple if statements. A command block is a set of statements contained within a set of braces. Each command block must have an opening brace ( { ) and a closing brace ( } ). When an  if statement contains a command block, the statements in the command block execute when the if statement condition evaluates to <em>true</em>. When the condition evaluates to <em>false</em>, the command block is skipped, and the statements that follow execute.</p>
+<p> </p>
+<br />
+<p><b>Example:</b></p>
+<p> </p>
+<blockquote>
+<p class="code">if (quantity&gt;=100) { <br />     discount=0.1;<br />     document.write("Your discount is: " +  discount*100 + "%.");        <br /> }</p>
+</blockquote>
+<p> </p>
+<p><b>Discussion topic: </b>What happens if the quantity in the above example equals to 80? What will be displayed on the screen?</p>
+<p> </p>
+<br />
+<p><b>Practice: </b>Create JavaScript statements that would display Good job if the student's exam grade is 90 or more.</p>
+<p> </p>
+<p><b>Answer: </b></p>
+<p class="code">&lt;script type="text/javascript"&gt;<br />     var grade=95;<br />     if (grade&gt;=90){   <br />       document.write("Good Job");<br />      }<br /> &lt;/script&gt;</p>
+<p><b>Result:</b></p>
+<p class="result">
+<script type="text/javascript">/*<![CDATA[*/
+var grade=95;
+    if (grade>=90){   
+       document.write("Good Job");
+     }
+/*]]>*/</script>
+</p>
+<p style="line-height: 150%;"> </p>
+<p style="line-height: 150%;"><b><a href="#top" style="text-decoration: none;">[TOP]</a></b></p>
+<p style="line-height: 150%;"></p>
+<hr />
+<p style="line-height: 150%;"></p>
+<br />
+<h2><a name="Comparison_and_Conditional_Operators�_"></a>Comparison Operators <a name="Comparison_and_Conditional_Operators�_"></a> </h2>
+<blockquote>
+<p style="line-height: 150%;"><b> Comparison operators </b>are used to compare two operands and determine if one numeric value is greater than another. A Boolean value of true or false is returned after two operands are compared. Comparison operators: <b>==, ===,  !=,  !==,  &gt;,  &lt;,  &gt;=</b>,  and <b> &lt;=</b>. You can use number or string values as operands with comparison operators. When two <b>nonnumeric</b> values are used as operands, the JavaScript interpreter compares them in alphabetical order. The following table lists JavaScript's comparison operators:</p>
+<p style="line-height: 150%;"> </p>
+<p style="text-align: center;"><img src="Operat4.gif" border="0" height="397" width="644" /></p>
+<p><b>Note: </b>  In JavaScript the equality comparison operator is <b>==</b> and not <b>=</b>. If you want to compare two variables to see if they are equal to each other you need to use the == operator. Look at the following example which tries to compare the values of two variables named <i>number1 </i>and <i>number2. </i> Do you see any problems with the following statements?</p>
+<p> </p>
+<p class="code">&lt;script type="text/javascript"&gt;<br />      var number1= 1;<br />      var number2= 10;<br />      if (number1 = number2){<br />            alert("The two numbers are equal");<br />     }<br />     document.write("Number1 equals to: "<br />    + number1);<br />  &lt;/script&gt;</p>
+<p> </p>
+<p>As you have guessed, the wrong operator is used to compare the two values. As the result, the value of number2 will be assigned to number1. So instead of comparing the two values you are setting them equal to each other.  Fix the error and discuss your observations in the Discussion board.</p>
+<p> </p>
+<p style="line-height: 150%;"><b><a href="#top" style="text-decoration: none;">[TOP]</a></b></p>
+<hr />
+<p style="line-height: 150%;"> </p>
+<h2><a name="Logical_Operators�_"></a>Logical Operators<a name="Logical_Operators�_"></a></h2>
+<blockquote>
+<p><b>Logical </b>operators<b> </b>are used for comparing <b>two </b>Boolean operands for equality. A Boolean value of<b> true </b>or <b> false</b> is returned after two operands are compared. Logical operators are  <b>&amp;&amp;, ||, </b>and <b> !</b>. The <b>Or || </b>and the <b>And &amp;&amp;</b> operators are binary operators (requiring two operands), while the <b>Not ! </b>operator is a unary operator (requiring a single operand).  To insert the OR logical operator, you have to use the piping character which is <b>Shift + \ .</b> The following lists the JavaScript logical operators:</p>
+<p> </p>
+<blockquote>
+<p style="text-align: center;"><img src="Operat5.gif" border="0" height="177" width="640" /></p>
+<p style="text-align: center;"> </p>
+</blockquote>
+<p><b>Example: </b>Write an if statement that displays "Grade is a B" if the grade is less than 90 and more than or equal to 80. Assume the grade is actually 85.</p>
+<p> </p>
+<p class="code">&lt;script type="text/javascript"&gt;<br /> var grade=85;       <br /> if (grade &lt; 90 &amp;&amp; grade &gt;= 80){       <br />   document.write("Grade is a B");<br />  }<br /> &lt;/script&gt;</p>
+</blockquote>
+<p><b>Example: </b>Write an if statement that displays "Your ticket only costs $5.00"  if the age is less than 10 or greater than or equal to 65. Assume the age is actually 8.</p>
+<blockquote>
+<p> </p>
+<p class="code">&lt;script type="text/javascript"&gt; <br /> var age=8;      <br />  if (age &lt; 10 || age&gt;= 65){<br />  document.write(<br /> "Your ticket only costs $5.00");<br />   }<br />  &lt;/script&gt;</p>
+<p style="line-height: 150%;"><b><a href="#top" style="text-decoration: none;">[TOP]</a></b></p>
+<p> </p>
+<hr /></blockquote>
+</blockquote>
+<h2><a name="IfElseStatements"></a>If else statements</h2>
+<blockquote>
+<p style="line-height: 150%;">In some situations you may want to execute one set of statements when the condition evaluates to <b>false</b>, and another set of statements when the condition evaluates to<b> true</b>. In that case, you need to add an <b>else</b> clause to your<img src="if-then-else.gif" align="right" border="0" height="191" hspace="30" width="283" /> if statement. You can use command blocks to construct an if...else  statement as follows:</p>
+<p class="code" style="clear: both;">if (<i>conditional expression</i>) { <br /><i> statements</i>; <br />} <br />else { <br /> <em>statements </em><br /> }</p>
+<p><b> Example</b></p>
+<p class="code">if(age&gt;=18){ <br /> status="Adult"; <br /> } <br /> else { <br /> status="Minor"; <br /> }</p>
+</blockquote>
+<p> </p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoHeader"><b>Practice: </b>Write JavaScript statements that display different messages on the screen based on the user's age. Discuss your observations in the Discussion board.</p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoHeader"> </p>
+<p><b><a href="#top" style="text-decoration: none;">[TOP]</a></b></p>
+<p style="line-height: 150%;"></p>
+<hr />
+<p style="line-height: 150%;"></p>
+<br />
+</body>
+
+</html>

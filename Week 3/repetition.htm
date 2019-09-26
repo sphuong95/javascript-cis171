@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> Loops</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: &#039;courier new&#039;;
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	
+</style>
+</head>
+<body>
+<h1 style="text-align: center;"><a name="top"></a>Repetition</h1>
+<h2 style="text-align: center;"><b>[<a href="#while">while</a>] | </b><b>[</b><b><a href="#forStatement">for Statement</a>] </b></h2>
+<hr />
+<p style="line-height: 150%;"></p>
+<h2 style="line-height: 150%;"><b>Loops</b></h2>
+<p style="line-height: 150%;">A <b>loop</b> statement is a control structure that repeatedly executes a statement or a series of statements while a specific condition <b>is true </b>or until a specific condition <b>becomes true</b>. JavaScript contains various types of loops. In this lecture, you are going to learn about the most frequently used loops which are the<b> while</b> and the<b> for </b>loops.</p>
+<h2 style="line-height: 150%;"><b><a name="while"></a>while </b></h2>
+<p style="line-height: 150%;">One of the simplest types of loop statements is the<b> while</b> statement, which repeats a statement or series of statements as long as a given conditional is to <b>true</b>. The syntax for the while statement is as follows:</p>
+<p class="code">while (conditional expression) {<br />       statement(s);<br /> }</p>
+<p style="line-height: 150%;"><img src="loop_while.gif" alt="loop" align="right" /></p>
+<p style="line-height: 150%;">The conditional expression in the while statement is enclosed within parentheses following the keyword while. Each repetition of a looping statement is called an<b> iteration</b>. When the conditional expression evaluates to <b>false</b>, the loop <b>ends</b> and the next statement following the while statement executes.</p>
+<p style="line-height: 150%;">You track the progress of a while statement, or any other loop, with a counter. A <b>counter</b> is a variable that increments or decrements with each iteration of a loop statement. To ensure that the while statement will eventually end, you must include code within the body of the while statement that changes the value of the conditional expression. In an <b>infinite</b> loop, a loop statement never ends because its conditional expression is never false.</p>
+<p><b>Example:</b></p>
+<p class="code"><br /> &lt;script type="text/javascript"&gt;   <br />    var result=1;   <br />     while (result &lt;=50) {       <br />         document.write(result + "&lt;br /&gt;");       <br />         result=result*2;   <br />     }    <br /> &lt;/script&gt;</p>
+<p><a target="_blank" href="while.htm">Result </a></p>
+<p> </p>
+<br />
+<p>Note that the statements<i> document.write </i>and <i>result=result*2 </i>will execute until result becomes more than 50.</p>
+<br />
+<p><b>Discussion Topic: </b>What happens if you leave out the result=result*2 out of the above example? Discuss your answer in the Discussion board.</p>
+<p><b>Practice: </b>Create a while loop that asks for a number and displays the square root of the number. The program should repeat this until the visitor enters zero as the number.</p>
+<p> </p>
+<p><b>Answer:</b></p>
+<p> </p>
+<p class="code">&lt;script type="text/javascript"&gt;<br />     var num;<br />     num=prompt("Enter a number:");<br />     while(num!=0) {<br />         document.write(num*num +"&lt;br /&gt;");<br />         num=prompt("Enter a number:");<br />     }<br />  &lt;/script&gt;</p>
+<p> </p>
+<br />
+<p><a href="#top" style="text-decoration: none;">[TOP]</a></p>
+<hr />
+<p style="line-height: 150%;"></p>
+<h2 style="line-height: 150%;"><a name="forStatement"></a>for Statement</h2>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal"><img alt="for" src="for.gif" align="right" />The<i> </i><b>for </b>statement is used for repeating a statement or series of statements as long as a given conditional expression is<b> true</b>. The for statement performs essentially the same function as the while statement: if a conditional expression within the for statement evaluates to true, then the for statement executes and will continue to execute repeatedly until the conditional expression evaluates to false.</p>
+<p>One of the primary differences between the while statement and the for statement is that in addition to a conditional expression, the for statement can also include the code that <b>initializes a counter</b> and <b>changes its value</b> with each iteration. This is useful because it provides a specific place for you to declare and initialize a counter, and to update its value, which helps prevent infinite loops.</p>
+<p>The syntax of the for statement is as follows:</p>
+<p class="code">for (counter initialization; test condition; increment or decrement the counter) {<br />           statement(s); }</p>
+<p><b>Example: </b></p>
+<p class="code"><br /> &lt;script type="text/javascript"&gt;<br />     var result;<br />    for (result =1; result&lt;=50; result=result*2) {<br />     document.write(result + "&lt;br &gt;"); <br />    }<br /> &lt;/script&gt;</p>
+<p><b>Practice:</b> Create a Web page that shows numbers 1 through 25, and their squares in a table.</p>
+<p> </p>
+<p><b>Answer:</b></p>
+<p> </p>
+<p class="code">&lt;script type="text/javascript"&gt;<br />      var num;<br />     document.write <br />      ("&lt;table border='1' style='width:30%'&gt;");<br />     for (num=1; num&lt;=25; num++){<br />           document.write(<br />            "&lt;tr&gt; &lt;td&gt;"+num + "&lt;/td&gt; &lt;td&gt;" +<br />            num*num  +  "&lt;/td&gt;&lt;/tr&gt;");<br />     }<br />     document.write ("&lt;/table&gt;");<br />  &lt;/script&gt;</p>
+<p> </p>
+<p><b>Result:</b></p>
+<p>
+<script type="text/javascript">/*<![CDATA[*/
+   var num;
+   document.write ("<table border=&#039;2&#039; width=&#039;30%&#039; align=&#039;center&#039;>");
+   for (num=1; num<=25; num++){
+   		document.write("<tr> <td> <font color=&#039;black&#039;>"+num + "</td> <td><font color=&#039;black&#039;>" + num*num + " </td></tr>");
+}
+	document.write ("</table>");
+/*]]>*/</script>
+</p>
+<p style="line-height: 150%;">Note that you should only include the statements that should repeat within the body of the loop.</p>
+<p style="line-height: 150%;"><b>Discussion Topic:</b> What would happen if you had inserted the <b>document.write ("&lt;table.....") </b> statement within the body of the for loop?</p>
+<p><b> <a href="#top" style="text-decoration: none;">[TOP]</a></b></p>
+<p> </p>
+<p> </p>
+<hr />
+</body>
+
+</html>

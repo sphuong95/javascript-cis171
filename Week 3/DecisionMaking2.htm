@@ -1,0 +1,62 @@
+<!DOCTYPE HTML><html><head><meta charset="utf-8" /><title> Decision Making</title><script>function showResult(){var items;var discount;items=prompt("How many items do you want to purchase?");if (items<=10){   discount=0;   }else if (items<=20){   	discount=.1;   }else if (items<=50){   	discount=.2;   }else if(items<=100){   	discount=.25;   } else{    discount=.3    }   alert("Your discount is: " + discount*100 +"%.");   }</script><style>	body{		font-family: arial;		margin-left: 6%;		margin-right: 5%;		background: url(back.jpg) left repeat-y,		url(back.jpg) right repeat-y;			}	h1, h2, h3 {		color: #800000	}	p, li {		line-height: 1.5;	}	ul li {			list-style-image: url(bul.gif);	}	ul ul li{			list-style-image: url(bull2.gif);	}	hr {		width: 75%;		height: 3px;		background-color: silver	}	.code {		margin-left: 20%;		margin-right: 20%;		margin-top: .5in;		margin-bottom: .5in;		font-weight: bold;		background-color: #FFFFCC;		padding: 50px;		font-family: &#039;courier new&#039;;		font-size: 14pt;		background-image: url(codeback.jpg);		background-size: 100% 100%;		background-clip: border-box	}	.result {				margin-left: 20%;		margin-right: 20%;		margin-top: .5in;		margin-bottom: .5in;		background-color: #FFFFCC;		padding: 50px;		background-image: url(codeback2.jpg);		background-size: 100% 100%;		background-clip: border-box	}	a {		font-weight: bold;		font-size: 14pt;	}	h2 { 		margin-top: .5in;	}	</style></head><body>
+<h1 style="text-align: center;">Decision Making Part 2</h1>
+<h2 style="text-align: center;">[<a href=" #Boolean_Values_and_Variables_">Boolean Values</a>] | 
+[<a href=" #Nested_If_Statements">else if</a>] | [<a href="#Switch">Switch</a>]</h2>
+<hr />
+<h2 style="text-autospace: none; line-height: 150%;">Boolean Values and Variables</h2>
+<p style="text-autospace: none; line-height: 150%;">Boolean values are logical values which can be either true or false. To assign true or false values to 
+a boolean variable, you can type the following statements:</p>
+<p><b> var varname=true; <br /> var varname=false;</b></p>
+<p>&nbsp;</p>
+<p style="text-autospace: none; line-height: 150%;"><b>Example: </b></p>
+<p class="code"><b>&nbsp;&lt;script type="text/javascript"&gt;<br /> &nbsp;var signin=true;<br /> &nbsp; if 
+(signin==true){<br /> &nbsp; alert("You have successfully signed in!");<br /> &nbsp; }<br /> &nbsp; else{<br /> &nbsp; alert("You have to sign-in inorder to proceed");<br /> &nbsp; }<br /> </b> <b>&nbsp; &lt;/script&gt;</b></p>
+<p style="text-autospace: none; line-height: 150%;">Note that since the boolean values of true and false are not text strings, and you <b>should not </b> enclose them in quotations.</p>
+<p style="text-autospace: none; line-height: 150%;">You can modify the above<i> if</i> statement to<b>:</b></p>
+<p><b>if(signin)</b></p>
+<p style="text-autospace: none; line-height: 150%;">and the result you'll get will be identical to the above example.</p>
+<p style="text-autospace: none; line-height: 150%;">&nbsp;</p>
+<p style="text-autospace: none; line-height: 150%;"><b>Discussion Topic:</b> Are the following two statements the same? How is the outcome going to vary amongst the two statements?</p>
+<ol>
+<li>
+<p>var complete=false;</p>
+</li>
+<li>
+<p>var complete="false";</p>
+</li>
+</ol>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal"><b> <a style="text-decoration: none;" href=" #top"> [TOP]</a></b></p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal">&nbsp;</p>
+<hr />
+<h2 style="text-autospace: none; line-height: 150%;">elseIf Statements</h2>
+<p style="text-autospace: none; line-height: 150%;" class="MsoHeader">In some cases you may want the statements executed by the if statements to make other decisions. Sometimes, one decision-making statement is contained within another decision-making statement. In those cases, you can use the <b>else if</b> statements as shown below:</p>
+<p class="code"><b> if (condition1) {<br /> &nbsp; Statements to be executed if<br>
+&nbsp; condition1 is&nbsp; true<br /> }<br /> else if (condition2) {<br /> &nbsp;Statements to be executed 
+<br>
+&nbsp;if condition2 is&nbsp; true<br /> }<br /> ...........<br /> ...........<br /> }<br /> else{<br /> &nbsp; Statements to be executed if none of the conditions are true<br /> }</b></p>
+<p>&nbsp;</p>
+<p><b> Example: </b>Create a statement that determines the discount percentage based on the number if items purchased. If the customers buys less then 10 items, the discount is zero. If the customers buy 10 to less then 20 items, the discount is 10%. If the customers buy 20 to less than 50 items, the discount is 20%. If the customers buy 50 to less than 100 items, the discount is 25%. If the customers buy 100 items or more, then the discount is 30%. Display the discount in an alert box.</p>
+<p>&nbsp;</p>
+<p class="code">&lt;script type="text/javascript"&gt;<br /> var items;<br /> var discount;<br /> items=prompt("How many items do you want to purchase?");<br /> if (items&lt;10){<br /> &nbsp; discount=0;<br /> }<br /> else if (items&lt;20){<br /> &nbsp; discount=.1;<br /> }<br /> else if (items&lt;50){<br /> &nbsp; discount=.2;<br /> }<br /> else if(items&lt;100){<br /> &nbsp; discount=.25;<br /> } <br /> else{<br /> &nbsp; discount=.3<br /> }<br /> alert("Your discount is: " + discount*100 +"%.");<br /> &lt;/script&gt;</p>
+<p><b> <a href="#" onclick="showResult();"> Result</a></b></p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal"><b> <a style="text-decoration: none;" href="#top"> [TOP]</a></b></p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal">&nbsp;</p>
+<hr />
+<h2>Switch Statement</h2>
+<p style="line-height: 150%;">Another JavaScript statement that allows you to make a decision based on various choices is the <b>switch </b>statement. The following shows the syntax of the switch statement.</p>
+<p class="code">switch(expression)<br /> {<br /> case 1:<br /> &nbsp;execute code block 1;<br /> &nbsp;break;&nbsp; <br /> case 2:<br /> &nbsp;execute code block 2;<br /> &nbsp;break;<br /> .............<br /> .............<br /> default:<br /> &nbsp;code to be executed if none of the cases are true<br /> }</p>
+<p style="line-height: 150%;">&nbsp;</p>
+<p style="line-height: 150%;">The <b>switch</b> statement evaluates an <i>expression</i> and executes a statement or a block of statements based on the value of the expression. The JavaScript interpreter checks each <b>case</b> against the value of the expression until a match is found. If nothing matches, 
+a <b>default</b> condition will be used.</p>
+<p>The way the switch statement works is that first, the value of the expression is compared with the values for each case in the structure. If there is a match, the block of code associated with that case is executed. The <b>break</b> statement instructs the interpreter to exit the switch statement after a match is found.</p>
+<p><b>Example: </b> Create a switch statement that determines the status of a high school student based on the number of years they have been in high school.</p>
+<p class="code">&lt;script type="text/javascript"&gt;<br /> &nbsp; var year;<br /> &nbsp; var status;<br /> &nbsp; year=parseInt(prompt("How many years have been in high school?"));<br /> &nbsp; switch(year){<br /> case 1:<br /> &nbsp;&nbsp;status="Freshman";<br /> &nbsp;&nbsp;break;<br /> 
+&nbsp;case 2:<br /> &nbsp;&nbsp;status="Sophomore";<br /> &nbsp;&nbsp;break;<br /> &nbsp;case 3:<br /> &nbsp;&nbsp;status="Junior";<br /> &nbsp;&nbsp;break;<br /> 
+&nbsp;case 4:<br /> status="Senior";<br /> &nbsp;&nbsp;break;<br /> }<br /> &nbsp; document.write("You are a " + status); <br /> 
+&nbsp;&lt;/script&gt;<br /> &nbsp;</p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal">&nbsp;</p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal"><b><a style="text-decoration: none;" href=" #top">[TOP]</a></b></p>
+<p style="text-autospace: none; line-height: 150%;" class="MsoNormal">&nbsp;</p>
+<p style="line-height: 150%;">&nbsp;</p>
+<hr />
+</body></html>

@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Collecting User's Input</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: 'courier new';
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	h1 { text-align:center}
+</style>
+
+<script type="text/javascript">
+function checkdata(){ if (document.stationary.Name.value=="" || document.stationary.ID.value=="") { 
+alert("The Name or the ID fields must be filled."); } } </script>
+
+</head>
+<body>
+<h1 style="line-height: 150%;"><a id="top"></a>
+Collecting User's Input</h1>
+<h2 style="text-align:center"><b>[</b><b><a href="#DialogBoxes">Dialog Boxes</a>] | [<a href="#Alert">Alert</a>] <br /> [<a href="#Confirm_">Confirm</a>] | [<a href="#Prompt_">Prompt</a>]</b></h2>
+<hr />
+<p></p>
+<h2 style="line-height: 150%;"><b><a id="DialogBoxes"></a>Dialog Boxes</b></h2>
+
+<h2 style="line-height: 150%;"><b><a name="Alert"></a>Alert</b></h2>
+<p>At times it might be necessary to notify the user of possible issues or problems with their input. JavaScript provides two methods to do this. These methods are the <b>alert() </b>and the <b>confirm()</b> methods, and both are very useful for getting the user's attention. The only difference between the two is that the confirm() method returns the user's response, while alert displays a message. Depending on the situation, the alert() method may be all that is required. The alert method is an integral part of letting the user know of errors found in their input.</p>
+<p>The syntax of the alert method is as follows:</p>
+
+<p class="code"><b>alert("Message");</b></p>
+
+<p><b>Example: </b>Create an alert box that displays the message "Welcome to My Web Page".</p>
+
+
+
+<p class="code"><b>&lt;script  type="text/javascript"&gt;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Welcome to My Web Page");<br /> &lt;/script&gt; </b></p>
+
+
+
+<p> <a target="_blank" href="alet.htm">Click here to see the result</a></p>
+<p><b><a href="#top">[TOP]</a></b></p>
+<hr />
+<p></p>
+<h2 style="line-height: 150%;"><b><a name="Confirm_"></a>Confirm</b></h2>
+<p>The <b>confirm </b>method displays a message box just like the alert method, but also includes a Cancel button. If the visitor clicks the OK button, the true value is returned. If the visitor clicks the Cancel button, the false value is returned.  The following displays the syntax of the confirm method:</p>
+
+<p class="code"><b>confirm("Message");</b></p>
+
+<p><b>Example: </b>Create a dialogue box that contains both OK and Cancel buttons. <b> </b>If the user clicks the OK button, a message will display that says "I will continue". If the user clicks the Cancel button, a message will display that says "I will quit now".</p>
+
+
+
+<p class="code">&lt;<b>script  type="text/javascript"&gt;<br />    var answer=confirm("Do you want to continue?");<br />    if (answer==true){<br />     document.write("I will continue.");<br />    }<br /> else {<br />     document.write("I will quit now.");<br />   }<br /> &lt;/script&gt;</b></p>
+
+
+
+<p></p>
+<p> </p>
+<p><b><a href="#top">[TOP]</a></b></p>
+<hr />
+<p></p>
+<h2 style="line-height: 150%;"><b><a name="Prompt_"></a>Prompt</b></h2>
+<p>The <b>prompt </b>method collects a piece of data from the user and assigns it to a variable. The following displays the syntax of the prompt method:</p>
+
+<p class="code"><b>var VariableName = prompt("Prompt", "Default Value");</b></p>
+
+<p>The default value is optional, but if you decide to add a default value, the value will display in the text box that is provided in the prompt's dialogue box.</p>
+<p><b>Example:  </b>Create a prompt box that asks for the user's first name and then assigns the name to a variable named <b>FirstName</b>.</p>
+
+
+<p class="code"> <b>&lt;script  type="text/javascript"&gt;<br />      
+var FirstName=prompt("Enter your first name", "First Name");<br /> &lt;/script&gt; </b></p>
+
+
+<p> </p>
+<p>Now assume that you want to take the user's first name and display a user friendly message. The following example creates a message using the visitor's first name.</p>
+
+
+<p class="code"><b>&lt;script  type="text/javascript" &gt;<br />     var FirstName=prompt("Enter your first name", "First Name");<br />     document.write("&lt;h1&gt; Hi " + FirstName + ". Welcome to My Home Page. &lt;/h1&gt;"); <br /> &lt;/script&gt; </b></p>
+
+
+<p> </p>
+<p><b>Practice: </b> Create a prompt box that asks the visitors three questions.  Display the visitor's responses in an alert box.  Discuss your observations in <b> Unit 2 </b>forum of the Discussion board.</p>
+<p><b><a href="#top">[TOP]</a></b></p>
+<hr />
+</body>
+
+</html>

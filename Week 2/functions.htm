@@ -1,0 +1,353 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> Functions </title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: 'courier new';
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center"><a name="top"></a>Functions</h1>
+<h2 style="text-align:center">
+[<a href="#DefiningFunctions">Defining Functions</a>] 
+&nbsp;[<a href="#CallingFunctions">Calling Functions</a>] | 
+
+[<a href="#Returningvalue">Returning a Value</a>] 
+[<a href="#Variable_Scope">Variable Scope</a>]</h2>
+
+
+<p>In JavaScript, groups of statements that you can execute as a single unit are called 
+<b>functions</b>. Functions are useful because they make it possible to treat a related group of JavaScript statements as a single unit.  Functions, like all JavaScript code, must be contained within a <b>&lt;script&gt;</b> element.</p>
+
+<p style="line-height: 150%"></p>
+<h2>
+<a name="DefiningFunctions">Defining Functions </a>
+</h2>
+<p style="line-height: 150%"></p>
+
+<p>Before you can use a function in a JavaScript program, you must first create, or 
+<b>declare</b>, it. The lines that make up a function are called the<b> function definition</b>. The syntax for defining a function is:</p>
+
+<p class="code">
+function functionName(<i>arguments</i>) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    statements;<br>
+}</p>
+
+
+<p>
+Arguments or parameters are placed within the parentheses that follow a function name.  An
+<b>argument</b> is a variable that is used within a function. Placing an 
+argument name within the parentheses of a function definition is the equivalent of declaring a new variable. Functions can contain none or multiple 
+arguments separated by commas. </p>
+<p>
+Following the parentheses that contain the function arguments is a set of curly braces that contain the function statements. 
+<b>Function statements </b>are the statements that do the actual work of the function and must be contained within the function braces.</p>
+
+
+<p>
+<b>Example: </b>Assume you want to create a 
+function that takes the total sales figure and determines the grand total which 
+includes the sales tax. The following statements create such a function.</p>
+<p>
+&nbsp;</p>
+		<p class="code">
+		<b>&lt;script 		type="text/javascript"&gt;<br>
+		</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;&nbsp;function printName(total){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var salesTax
+		=.06;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var grandTotal= salesTax*total;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write("The total is: " + grandTotal);<br />
+		</b>
+		<b>&nbsp;&nbsp;&nbsp;&nbsp; </b><b>&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+		&lt;/script&gt;</b></p>
+
+<p style="line-height: 150%">&nbsp;</p>
+<p style="line-height: 150%">Type the above statements inside an HTML 
+document. What is the result?&nbsp; If you answered nothing, you are correct. Next 
+you'll learn how to actually invoke the function.</p>
+<p style="text-align:center">
+</p>
+<hr>
+
+<h2 style="line-height: 150%; text-autospace: none; margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: .0001pt">
+&nbsp;</h2>
+<h2 style="line-height: 150%; text-autospace: none; margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: .0001pt">
+&nbsp;</h2>
+<h2 style="line-height: 150%; text-autospace: none; margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: .0001pt">
+<a name="CallingFunctions">Calling Functions</a></h2>
+
+
+<p>A function definition does not execute automatically. Creating a function definition only names the function, specifies its parameters, and organizes the statements it will execute. To execute a function, you must 
+<b>invoke</b>, or call, it from elsewhere in your program. The code that calls a function is referred to as a <b>function call </b>and consists of the function name followed by parentheses that contain any variables or values to be assigned to the function parameters. The variables or values that you place in the parentheses of the function call statement are called <b>arguments </b>or actual parameters. Sending arguments to the parameters of a called function is called passing arguments.</p>
+<p> <b>Example: </b>Create a function that writes message <b><i>Hello Students</i></b><i> </i>to the web page.</p>
+
+	<p style="line-height: 150%"></p>
+	<p class="code">
+	<b>....</b><br>&lt;script 
+type="text/javascript"&gt;<br>
+	<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function practice() {<br>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write("Hello Students");<br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+	</b>&lt;/script&gt;<br>&lt;/head&gt;<br>
+	<b>&lt;body&gt;<br>
+	</b>
+	&lt;script 
+type="text/javascript"&gt;<br>
+	
+	<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           practice();<br>
+	&lt;/script&gt;</b></p>
+<p style="line-height: 150%"></p>
+<p>
+&nbsp;</p>
+<p>
+In the above example, the function contains <b>no arguments</b> so the parentheses after the function name is <b>empty</b>.</p>
+
+<p><b>Note: </b>Always put your functions within the 
+<b>document head</b>, and place <b>calls</b> to a function within the body section. As you recall, the document head is always rendered before the document body. If your program does attempt to call a function before it has been created, you will receive an error.</p>
+<p style="line-height: 150%">Now, lets assume we want to create a function that 
+takes the user's first name as an argument, and displays a welcome message using 
+the visitor's name.</p>
+<p style="line-height: 150%">&nbsp;</p>
+<p style="line-height: 150%">
+
+	<p style="line-height: 150%"></p>
+	<p class="code">.<b>...........<br>&lt;head&gt;<br>
+	</b>
+	&lt;script 
+type="text/javascript"&gt;<br>
+	
+	<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function welcome(visitorName) {<br>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write("Hello " + visitorName);<br>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      }&nbsp;&nbsp;&nbsp;
+	<br>
+	&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>     
+	</b>&lt;script 
+type="text/javascript"&gt;<b><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          var firstName= prompt("Enter your first name:");<br>          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          welcome(firstName);
+	<br>
+	&lt;/script&gt;<br>&lt;/body&gt;</b></p>
+<p style="line-height: 150%"></p>
+
+	<p>
+	<a target="_blank" href="practice.htm">Result</a></p>
+
+
+<p>
+&nbsp;</p>
+<p>
+Note that in the above example, the function is 
+accepting one argument named "<b>visitorName</b>" which is the firstName 
+retrieved through the prompt box. Also note that even thought the variable names 
+used in this example are not the same (firtName and visitorName,) they represent 
+the same value which is the first name the visitor types in the prompt box.</p>
+<p><b>Practice: </b>Write JavaScript statements that retrieve a visitor's name and his/her age. Create a function that takes the name and the age and displays a message on the screen. Discuss your observations in the Discussion area.</p>
+<p><b>Answer: </b></p>
+
+	
+		<p style="line-height: 150%">
+			<p style="line-height: 150%">
+			</p>
+			<p class="code"><b>
+			..................<br>&lt;head&gt;<br>   
+			</b>
+			&lt;script 
+type="text/javascript"&gt;<b><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        function welcome(visitorName, visitorAge) {<br>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write("Hello " + visitorName + ". You are " + visitorAge + " years old.");<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       }<br>
+			&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    
+			</b>&lt;script 
+type="text/javascript"&gt;<br>
+			
+			<b>&nbsp;&nbsp; </b><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        var firstName= prompt("Enter your first name:");<br>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var age= prompt("Enter your age:");<br>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;welcome(firstName, age);
+			<br>
+			&lt;/script&gt;<br>&lt;/body&gt;</b></p>
+			<p style="line-height: 150%">
+	
+
+<p style="line-height: 150%">
+</p>
+<p>
+&nbsp;</p>
+<p>
+<a target="_blank" href="practice2.htm">Result</a></p>
+
+<p>Note that the function needs <b>two</b> parameters which are visitor's first name and age. </p>
+
+<p>&nbsp;</p>
+<p><a href="#top">[TOP]</a></p>
+<p style="line-height: 150%"></p>
+<p style="text-align:center">
+</p><hr>
+
+
+<h2>
+<a name="Returningvalue">Returning a value </a>
+</h2>
+
+
+<p>Functions can calculate a value and send it to the calling statement. 
+To do so, you need to assign the <b>calling statement</b> to a variable.&nbsp;&nbsp; In order to send (return) a value to the calling statement, you need to use the <b>return </b>statement followed by the name of the variable you want to return.  <b>A function does not necessarily have to return a value</b>.</p>
+
+<p>Example:  Assume you want to create a function that requires two numbers. The function should calculate the average of the two numbers and return the result to the calling statement.</p>
+<p>&nbsp;</p>
+<p style="line-height: 150%">
+
+	
+	
+			<p style="line-height: 150%">
+			</p>
+			<p class="code"><b>
+			.................<br>&lt;head&gt;<br>    
+			</b>
+			&lt;script  
+type="text/javascript"&gt;<br>
+			<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        function average(num1, num2) {<br>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            var result=(num1 + num2)/2;<br>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            return result;<br>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }<br>
+			&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>      
+			</b>&lt;script 
+type="text/javascript"&gt;<br>
+			<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var first=5;<br>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        var second=20;<br>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        var summary=average(first, second);<br>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        document.write(summary);<br>
+			&lt;/script&gt;<br>&lt;/body&gt;</b></p>
+	
+		<p style="line-height: 150%"></p>
+	
+
+<p>&nbsp;</p>
+<p><b>
+<a target="_blank" href="practice3.htm">Result</a></b></p>
+<p>Note that 
+the average function is returning the result to the calling statement, and the 
+calling statement is assigning the result to a variable named<b> "summary".</b></p>
+<p><b>Practice: </b>Create a function that multiplies two numbers and returns the result to the calling statement. Discuss your observations in the Discussion area.</p>
+<p style="line-height: 150%">&nbsp;</p>
+
+<p><a href="#top">[TOP]</a></p>
+
+<p style="line-height: 150%"></p>
+<p style="text-align:center">
+</p><hr>
+
+
+<p style="line-height: 150%"></p>
+
+	
+		
+			<p style="line-height: 150%"></p>
+		
+	
+	<h2 style="text-autospace: none; line-height: 150%; margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: .0001pt">
+	<br>
+<a name="Variable_Scope">Variable Scope</a></h2>
+	<p>&nbsp;A variable's scope can either be local or global. A <b>
+	global</b> variable is declared outside a function and can be used and 
+	referenced throughout the program. The following shows an example of a 
+	global variable that is used within the function:</p>
+	<p>&nbsp;</p>
+			
+			<p class="code">&nbsp;&lt;script 
+type="text/javascript"&gt;<br>
+			<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var 
+			num1=5;<br>&lt;/script&gt;</b></p>
+		
+
+	
+	<p>&nbsp;</p>
+<p>The <b>var</b> keyword is optional when you declare a 
+	global variable.</p>
+	<p>
+	<br>A <b>local</b> variable is declared inside a function and 
+	can be used and referenced only within that function.&nbsp; If you try to 
+	reference a local variable outside that function, you will receive an error 
+	message. The following shows the improper use of a local variable:</p>
+
+<p style="text-autospace: none; line-height: 150%; margin-left: 0in; margin-right: 0in; margin-top: 0in; margin-bottom: .0001pt;width:400px">&nbsp;</p>
+
+		
+			
+	
+		
+		
+				<p class="code">&nbsp;<b>.................<br>&lt;head&gt;<br>
+				</b>
+				&lt;script  
+type="text/javascript"&gt;<br>
+				<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function 
+				example() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; var num1=10;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+				&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;</b> <br>				
+				&lt;script 
+type="text/javascript"&gt;<br>
+				<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				example();</b>
+					<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write(num1);<br>&lt;/script&gt;</b></p>
+		
+		
+	
+
+	<p>&nbsp;Copy and paste the code in your text editor and note that 
+	the code will result in an error message.</p>
+	<p>If you declare a variable within a function's scope and 
+	don't include the var keyword, then that variable becomes a <b>global </b>
+	variable. Modify the previous example and remove the var keyword from the <b>&nbsp;&nbsp;            var num1=10; </b>
+	statement. Do you still get the error message? Why? Discuss your 
+	observations in <b>Unit 2</b> forum of the Discussion board.</p>
+		
+		
+<p><a href="#top">[TOP]</a></p>
+
+
+</body>
+
+</html>

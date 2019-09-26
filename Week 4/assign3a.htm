@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>assign3a.htm</title>
+	<script type="text/javascript">  
+		function Company(name, products, motto, numEmployees) { 
+			this.name = name;
+			this.products = products;
+			this.motto = motto;
+			this.numEmployees = numEmployees;
+		}
+	</script>
+</head>
+<body>
+<script>
+	var myCompany = new Company("The JS Shack", "Software", "SASSY and SAVVY", 2);
+	document.write("The company name is " + myCompany.name + ".</br>");
+	document.write("The company sells " + myCompany.products + ".</br>");
+	document.write("The company motto is '" + myCompany.motto + "'.</br>");
+	document.write("The company has " + myCompany.numEmployees + " employees.");
+</script>
+</body>
+</html>

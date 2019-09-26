@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Expressions and Operators</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: &#039;courier new&#039;;
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	h1 { text-align:center}
+</style>
+
+
+
+
+</head>
+
+<body>
+<h1 style="text-align: center;"><a name="top"></a> Expressions and Operators</h1>
+<p style="text-align: center;">[<a href="#EXPRESSIONS">Expressions</a>] | [<a href="#Arithmetic_Unary_Operators_">Unary Operators</a>] | [<a href="#Assignment_Operators_">Assignment Operators</a>]</p>
+<p style="text-align: center;"> [<a href="#Comparison_and_Conditional_Operators�_">Comparison and Conditional Operators</a>] | [<a href="#Logical_Operators�_">Logical Operators</a>]</p>
+<hr />
+<h2><a name="EXPRESSIONS"></a>Expressions</h2>
+<p><b>An expression </b>is a literal value or variable or a combination of literal values, variables, operators, and other expressions that can be evaluated by the JavaScript interpreter to produce a result. You use operands and operators to create expressions in JavaScript. Operands<b> </b>are variables and literals contained in an expression. A<b> literal </b>is value such as a literal string or a number. <b>Operators </b>are symbols used in expressions to manipulate operands, such as the addition operator + and multiplication operator *.</p>
+<p>JavaScript's arithmetic binary operators are: <b>+</b> (addition),<b> - </b>(subtraction),<b> *</b> (multiplication),<b> /</b> (division), and <b>%</b> (modulus). JavaScript performs the operation on the right side of the assignment operator, and then assigns the value to a variable on the left side of the assignment operator.  The <b>modulus operator </b>returns the remainder that results from the division of two integers. When performing arithmetic operations on string values, the JavaScript interpreter attempts to convert the string values to numbers. The JavaScript interpreter, however, does not convert strings to numbers when you use the + binary operator.</p>
+<p><b>Examples:</b></p>
+<ol>
+<li>
+<p>Total = Cost  * Quantity;</p>
+</li>
+<li>
+<p>Sum = Item1 + Item2;</p>
+</li>
+<li>
+<p>MonthlySalary = AnnualSalary / 12;</p>
+</li>
+<li>
+<p>Remainder = 200 % 5.5;<br />  </p>
+</li>
+</ol>
+<p><b>Practice: </b>Create a script that calculates example 4. What is the answer?</p>
+<p><a style="text-decoration: none;" href="#top"> <b>[TOP]</b></a></p>
+<hr />
+<h2><a name="Arithmetic_Unary_Operators_"></a>Arithmetic Unary Operators</h2>
+<p>Arithmetic operations can also be performed on a <b>single</b> variable using unary operators. Arithmetic unary operators are: ++ (increment), -- (decrement), and  - (negation). The increment ++ and decrement -- unary operators can be used as prefix or postfix operators. A prefix operator<b> </b>is placed before a variable. A postfix operator<b> </b>is placed after a variable. However, the two statements return different values.  If you use the postfix unary operators, the value of the operand is returned before it is incremented (++) or decremented (--).</p>
+<p><b>Example:</b></p>
+<p class="code"><b> &lt;script  type="text/javascript"&gt;<br /> </b> <b>        var age=20;<br />        var year=2008;<br />        document.write("&lt;blockquote&gt; In " + year + " your age is: " + age);<br />        age++;<br />        year++;<br />        document.write("&lt;br&gt; In " + year + " your age is: " + age);<br /> &lt;/script&gt;</b></p>
+<p><b>Result:</b></p>
+<script type="text/javascript">/*<![CDATA[*/
+        var age=20;
+        var year=2008;
+        document.write(" In " + year + " your age is: " + age);
+        age++;
+        year++;
+        document.write("<br> In " + year + " your age is: " + age);
+/*]]>*/</script>
+<p><b>Practice:</b> Use the decrement unary operators to show the age in years 2016-2020. Discuss your observations in <b>Unit 2</b> forum of the Discussion area.</p>
+<hr />
+<h2><a name="Assignment_Operators_"></a>Assignment Operators</h2>
+<p><b>Assignment operators </b>are used for assigning a value to a variable. The equal sign assigns an initial value to a new variable or assigns a new value to an existing variable. JavaScript includes other assignment operators in addition to the equal sign. These additional assignment operators, called compound assignment operators, perform mathematical calculations on variables and literal values in an expression, and then assign a new value to the left operand. Assignment operators: <b>=</b>,<b>  +=</b>,<b>  -=</b>, <b>*=</b>, <b> /=</b>,<b> </b> and <b>%=</b>. The following table displays a list of common JavaScript assignment operators.</p>
+<p align="center"><img src="Operat2.gif" alt="operators" /><br /><img src="Operat3.gif" alt="operators" /></p>
+<p><b>Example: </b>Assume you want to give someone a 5.00% (.05) raise. The following statements display the use of the multiplication assignment operator:</p>
+<div>
+<p class="code"><b> &lt;script  type="text/javascript"&gt;<br /> </b> <b>    var salary=10;<br />    document.write("Your old salary is: " + salary + ".");<br />    salary*=1.05;<br />    document.write(" Your new salary is: " + salary + ".");<br /> &lt;/script&gt;</b></p>
+</div>
+<p><b>Result:</b></p>
+<p> </p>
+<script type="text/javascript">/*<![CDATA[*/
+var salary=10;
+document.write("Your old salary is: " + salary + ".");
+salary*=1.05
+document.write(" Your new salary is: " + salary + ".");
+/*]]>*/</script>
+<p><a style="text-decoration: none;" href="#top"><b>[TOP]</b></a></p>
+<hr />
+<h2><a name="Comparison_and_Conditional_Operators�_"></a> Comparison and Conditional Operators </h2>
+<p><b>Comparison operators </b>are used to compare two operands and determine if one numeric value is greater than another. A <b>Boolean</b> value of true or false is returned after two operands are compared. Comparison operators:<b> ==, ===, !=, !==, &gt;, &lt;, &gt;=</b>, and<b> &lt;=.</b> You can use number or string values as operands with comparison operators. When two nonnumeric values are used as operands, the JavaScript interpreter compares them in alphabetical order. The following table lists JavaScript's comparison operators:</p>
+<p align="center"><img src="Operat4.gif" alt="operators" /></p>
+<p>The comparison operator is often used with another kind of operator, the conditional operator. The conditional operator<b> </b>executes one of two expressions, based on the results of a conditional expression.  The syntax for the conditional operator is:</p>
+<p class="code">condition ? expression1:  expression2;</p>
+<p>If the condition is true, then expression1 will be executed. If the condition is false, then expression2 will be executed.</p>
+<p><a style="text-decoration: none;" href="#top"><b> [TOP]</b></a></p>
+<hr />
+<h2><a name="Logical_Operators�_"></a>Logical Operators<a name="Logical_Operators�_"></a></h2>
+<p><b>Logical operators </b>are used for comparing two Boolean operands for equality. A Boolean value of true or false is returned after two operands are compared. Logical operators are  <b>&amp;&amp;,</b> <b>||</b>, and <b>!. </b>The Or || and the And &amp;&amp; operators are binary operators (requiring two operands), while the Not ! operator is a unary operator (requiring a single operand). The following lists the JavaScript logical operators:</p>
+<p align="center"><img src="Operat5.gif" alt="operators" /></p>
+<p>Just like in math, not all the operators have the same priority order in an equation.</p>
+<p> </p>
+<p><a style="text-decoration: none;" href="#top"><b>[TOP]</b></a></p>
+<hr />
+</body>
+
+</html>

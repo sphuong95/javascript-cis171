@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>assign3a.htm</title>
+  <style type="text/css">
+	.divStyle {
+		background-color:blue;
+		color:white;
+	}
+	</style>
+	<script type="text/javascript">
+	document.fgColor="red";
+document.bgColor="green";
+document.linkColor="pink";
+        x=0;
+function moreInfo(){
+	if(x==0){
+	var myObj = document.getElementById("myDiv");
+	var newpar = document.createElement("p");
+	myObj.appendChild(newpar);
+	txt = document.createTextNode("2701 Fairview Rd. Costa Mesa, CA 92626");
+	newpar.appendChild(txt);
+	x=1;
+}
+}
+	function lessInfo(){
+	if(x==1){
+	var myObj = document.getElementById("myDiv");
+	var abc=myObj.lastChild;
+	myObj.removeChild(abc);
+	x=0;
+}
+}
+	function toggleInfo() {
+		if (x==0) {moreInfo();}
+		else {lessInfo();}
+	}
+	function untheload() {
+		prompt("Thanks for Visiting!");
+	}
+</script>
+</head>
+<body onunload="untheload()">
+	<div id="myDiv" class="divStyle">
+        <p onclick="toggleInfo()">
+            Orange Coast College (click for more info)
+	   </p>
+</div>
+<h1> Welcome to my Page! </h1>
+<a href="http://www.w3c.org"> W3C</a>
+<form>
+    <input type="button" value="Calculate" id="calculate">
+</form>
+<script>
+    var calculateTotal = document.getElementById("calculate");
+    calculateTotal.addEventListener("click", function() {
+var fname=prompt("What is your name?");
+window.alert("Welcome " + fname);
+}, false);
+</script>
+</body>
+</html>

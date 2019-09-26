@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <!--Create a Web page that asks users for the values of three variables and calculates the average of those three values. The program should then display the average in an alert box. Name the Web page assign1a.htm.-->
+  <title>assign1b.htm</title>
+  <script type="text/javascript">
+            function squareFunc(num) {
+               return (num*num);
+            }
+			function cubeFunc(num) {
+               return (num*num*num);
+            }
+</script>
+</head>
+<body>
+  <script type="text/javascript">
+    var num = prompt("Enter a number");
+    var squaredNum = squareFunc(parseFloat(num));
+	var cubedNum = cubeFunc(parseFloat(num));
+    alert(`The number you entered is ${num}. ${num} squared is ${squaredNum}, while ${num} cubed is ${cubedNum}.`);
+</script> 
+</body>
+</html>

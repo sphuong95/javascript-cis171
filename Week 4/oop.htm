@@ -1,0 +1,228 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Reacting to Events</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: 'courier new';
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	h1 { text-align:center}
+</style>
+
+</head>
+
+<body>
+<p><a name="top"></a></p>
+
+<h1 style="text-align:center">
+
+&nbsp;Object Oriented Programming</h1>
+<h2 style="text-align:center"><b>
+[<a href="#Objects">Objects</a>] 
+| [<a href="#Encapsulation">Encapsulation</a>] 
+| [</b><a href="#Classes">Classes</a>]<br>
+[<a href="#Built-in_JavaScript_Classes_">Built-in 
+JavaScript Classes</a>] | [<a href="#Instantiating_an_Object%C2%A0_">Instantiating 
+an Object</a>]<br>
+
+
+[<a href="#Garbage_Collection">Garbage 
+Collection</a>]</h2>
+<hr />
+<h2 style="line-height: 150%;">
+
+Objects</h2>
+
+	<p>
+	<b>
+	Object-oriented programming (OOP) </b>refers to the creation of reusable 
+	software objects that can be easily incorporated into multiple programs. The 
+	term object<b> </b>specifically refers to programming code and data that can 
+	be treated as an individual unit or component. The term data<b> </b>refers 
+	to information contained within variables or other types of storage 
+	structures.</p>
+	<p>
+	Objects can 
+	range from simple controls such as a button, to entire programs such as a 
+	database application. Popular object-oriented programming languages include 
+	C++, Java, and Visual Basic. Using any of these or other object-oriented 
+	languages, programmers can create objects themselves or use objects created 
+	by other programmers.</p>
+	<p>
+	JavaScript 
+	allows you to create objects. Instead of creating variables and functions 
+	and copying them to different locations when needed, you can put related 
+	variables and functions in a class and reuse that class whenever needed.</p>
+
+<h2 style="line-height: 150%;">
+
+Encapsulation&nbsp;</h2>
+
+	<p>
+	Objects are <b>
+	encapsulated</b>, which means that all code and required data are <b>
+	contained within</b> the object itself. Encapsulation places code inside 
+	what programmers like to call a “<b>black box</b>”; when an object is 
+	encapsulated, you cannot see “inside” it—all internal workings are hidden. 
+	The code (methods and statements) and data (variables and constants) 
+	contained in an encapsulated object are accessed through an interface. An 
+	interface<b> </b>represents elements required for a source program to 
+	communicate with an object.</p>
+	<p>
+	The principal 
+	of information hiding states that any class members that other programmers 
+	do not need to access or know about should be hidden. By removing the 
+	ability to see inside the black box, encapsulation reduces the complexity of 
+	the code, allowing programmers who use the code to concentrate on the task 
+	of integrating the code into their programs. Encapsulation also prevents 
+	other programmers from accidentally introducing a bug into a program.</p>
+	<p>&nbsp;</p>
+	<p>
+	
+	<a href="#top">
+	&nbsp;[TOP]</a></p>
+	<hr />
+
+<h2 style="line-height: 150%;">
+
+Classes&nbsp;</h2>
+
+	<p>
+	In 
+	object-oriented programming, the code, methods, attributes, and other 
+	information that make up an object are organized into <b>classes</b>. 
+	Essentially, a class is a <b>template</b>, or blueprint, that serves as the 
+	basis for new objects. When you use an object in your program, you actually 
+	create an <b>instance </b>of the class of the object. An instance<b> </b>is 
+	an object that has been created from an existing class. When you create an 
+	object from an existing class, you are said to be instantiating<b> </b>the 
+	object. A particular instance of an object inherits<b> </b>its methods and 
+	properties from a class—that is, it takes on the characteristics of the 
+	class on which it is based.&nbsp; </p>
+	<p>&nbsp;</p>
+
+<h2 style="line-height: 150%;">
+
+Built-in JavaScript Classes</h2>
+
+	<p style="line-height: 150%;">
+	The JavaScript 
+	language includes the 11 built-in classes: <b>Array, Boolean, Date, Error, 
+	Function, Global, Math, Number, Object, RegExp, and String</b>. Each object 
+	contains various methods and properties for performing a particular type of 
+	task. You can use some 
+	of the built-in JavaScript objects directly in your code, while other 
+	objects require you to instantiate a new object. The name you use for an 
+	instantiated object is really a variable just like an integer or string 
+	variable.&nbsp; Remember that JavaScript class names start with an uppercase 
+	letter.</p>
+	<p>	
+	<a href="#top">
+	&nbsp;[TOP]</a></p>
+	
+		<hr />
+	
+
+<h2 style="line-height: 150%;">
+
+Instantiating an Object&nbsp;</h2>
+
+	<p>
+	You can use 
+	some of the built-in JavaScript objects directly in your code, while other 
+	objects require you to instantiate a new object. The Math object is one that 
+	you can use directly in your programs without instantiating a new object.&nbsp; 
+	Unlike the Math object, an Array object requires you to instantiate a new 
+	object before you can use it. You create new arrays in your code using the 
+	new keyword and the 
+	<b>Array()</b> 
+	constructor. 
+	The following statement shows an example of how to instantiate an array 
+	named <i>familyMembers</i>:</p>
+
+
+	
+		<p class="code">var familyMembers = new Array();</p>
+	
+<h2 style="line-height: 150%;">
+
+Garbage Collection&nbsp;</h2>
+
+	<p>	<b>Garbage 
+	collection</b> refers to cleaning up, or reclaiming, memory that is reserved 
+	by a program. When you declare a variable or instantiate a new object, you 
+	are actually reserving computer memory for the variable or object. With some 
+	programming languages, you must write code that deletes a variable or object 
+	after you are through with it in order to free the memory for use by other 
+	parts of your program, or by other programs running on your computer. With 
+	JavaScript, you do not need to worry about reclaiming memory that is 
+	reserved for your variables or objects; JavaScript knows when your program 
+	no longer needs a variable or object and automatically cleans up the memory 
+	for you.</p>
+	<p>&nbsp;</p>
+	<p>	
+	<a href="#top">
+	&nbsp;[TOP]</a></p>
+	
+		<hr />
+	
+
+
+</body>
+
+</html>

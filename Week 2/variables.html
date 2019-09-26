@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> Unit 1 To Do List</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 5%;
+		margin-right: 3%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	h1 {text-align:center}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	hr {
+		wnameth: 75%;
+		height: 10px;
+		background-color: #800000
+	}
+		.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: 'courier new';
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+
+</style>
+</head>
+<body>
+	<h1>Variables</h1>
+	<h2 style="text-align: center"><b>[<a href="#Variablenames">Variable 
+	names</a>] | [<a href="#DeclaringVariables">Declaring 
+	Variables</a>] <br>
+	[<a href="#prompt_Method%28%29_">Prompt 
+	Method</a>] | [</b> <a name="parseInt()_Method0">parseInt() 
+	Method</a>]</h2>
+	
+		<hr />
+	
+	<h2><b>Variables</b></h2>
+	
+		<p>
+		The values a program stores in computer 
+		memory are commonly called<b> variables</b>.&nbsp;A 
+		variable is a placeholder used for storing the data in a program.&nbsp;Data 
+		stored in a specific variable often changes. To use a variable in a 
+		program, you first have to write a statement that creates the variable 
+		and assigns it a name (<b>declaring a</b> variable.) In addition to 
+		variables, users can create constants.&nbsp;A 
+		constant contains information that does not change during the course of 
+		program execution.</p>
+		<p>
+
+		A variable&nbsp; is a reserved area of memory where a value can be stored and 
+		retrieved while a program/script is running. When a program/script is 
+		loaded into memory, the bytes fall into one of two categories: <b>
+		instructions and data</b>. Instructions tell a program/script what to 
+		do. Data is used by the instructions. Some data is constant, meaning it 
+		cannot be changed while the program/script is running. This is true of 
+		any literal numbers or strings coded into the script. Some data, 
+		however, may not be known at the time the script begins or may need to 
+		change while the script is running. This is true of values which are 
+		calculated, manipulated, extracted from forms or cookies, or otherwise 
+		input to the script. Since these values can change, they are known as 
+		variables. </p>
+		<p>
+		
+		<a style="text-decoration: none; font-weight:700" href="#top">
+		[TOP]</a></p>
+		<hr />
+	
+	<h2>
+	Variable names</h2>
+	
+		<p>
+	
+		When declaring a variable, it is wise to follow generally accepted 
+		naming conventions. Chief among these is Hungarian notation. When a 
+		variable consists of two or more words such as "checking" and "account", 
+		Hungarian notation says to put the words together without any separators 
+		such as the underscore between them, and then capitalize the first 
+		letter of the second word and beyond. Using the words given above, the 
+		variable name becomes checkingAccount. This makes the variable name 
+		easier to read. The first letter is left lowercase to help distinguish 
+		the variable from more complex objects that will come later. Hungarian 
+		notation is also used for function names in JavaScript. </p>
+		<p>
+		When naming a variable, 
+		programmers need to adhere to the following rules:&nbsp;</p>
+		<ol>
+			<li>
+			Variable names must begin with an uppercase or lowercase ASCII 
+			letter, dollar sign ($), or underscore ( _ ).</li>
+			<li>You 
+			can use numbers in a variable name, but not as the first character.</li>
+			<li>You 
+			cannot include spaces in a variable name.</li>
+			<li>You 
+			cannot use reserved words for variable names.</li>
+		</ol>
+		<p>
+		Developers cannot use the 
+		JavaScript <b>Keywords</b> to create variables. Some programmers tend to 
+		capitalize the first letter or join reserved words with underscores to 
+		create variables. This approach is NOT recommended because it confuses 
+		other developers.</p>
+		<p>
+		<b>Note:</b> 
+		Variable names are case sensitive.&nbsp; If you receive errors that a 
+		variable is undefined, check to ensure that the capitalization used in a 
+		specific statement is the same as when the variable was declared.</p>
+		<p>
+		
+		<a style="text-decoration: none" href="#top">
+		[TOP]</a></p>
+		<hr />
+	
+	<h2>
+	Declaring Variables</h2>
+	
+		<p>
+		In JavaScript, you usually use the 
+		reserved keyword<b>&nbsp;</b><b>var</b>&nbsp;to 
+		create variables. For instance, to create a variable named&nbsp; myVariable, 
+		you use this statement:</p>
+		
+			
+		<p class="code">&nbsp;var myVariable;</p>
+		<br>
+		There are two steps to 
+		create a variable:&nbsp;<ol>
+			<li><b>Declare</b> 
+			the variable (as shown above)</li>
+			<li><b>Initialize</b> 
+			the variable</li>
+		</ol>
+		<p>
+		The <b>'=' </b>sign is 
+		used to initialize the variable, such as:&nbsp;</p>
+		<p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><i>var</i></b><i>variable_name 
+		= value;</i></p>
+		<p>
+		<b>Example:&nbsp;&nbsp;</b></p>
+		<p class="code">		
+			&lt;script type=&quot;text/javascript&quot;&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+			&nbsp;&nbsp;&nbsp; var age = 21;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;var firstname = &quot;John&quot;<br>
+			&lt;/script&gt;</b></p>
+			<br>
+&nbsp;
+		<p>
+		The value you assign to a variable can 
+		be a literal string or a numeric value. When you assign a literal string 
+		value to a variable, you <b>must enclose the text in quotation marks</b>. 
+		However, when you assign a numeric value to a variable, <b>do not</b> 
+		enclose the value in quotation marks or JavaScript will treat the value 
+		as a string instead of a number.</p>
+		<p>The '<b>+</b>'
+		sign can be used to join strings together and for arithmetic operations. 
+		This is called&nbsp;String concatenation.</p>
+		<p><b>Example: </b>
+		Create two variables by the names <b>firstname</b> and <b>lastname </b>
+		and assign your first and last names to those variables.&nbsp; Using the 
+		document.write method, display the full name.</p>
+		<p class="code">	&lt;script &nbsp; type=&quot;text/javascript&quot;&gt;<br>
+			&nbsp; &nbsp;&nbsp;<br>
+			<b>&nbsp;&nbsp;&nbsp;&nbsp; var firstname = &quot;Sally &quot;;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; var lastname = &quot;Anderson&quot;;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; document.write(firstname + lastname);<br>
+			</b>
+			
+			<b>&nbsp;&nbsp;&lt;/script&gt;</b></p>
+			<br>
+&nbsp;
+		<p><b>Result:</b></p>
+		
+			<p>SallyAnderson </p>
+		
+		<p class="B-Head">
+		
+		Example:&nbsp;
+		Create two variables by the names <b>message1 </b>and<b> lastname.</b>&nbsp; 
+		Assign a message to message1 and your last name to lastname.&nbsp; Display 
+		the massage and your last name on the screen.</p>
+		<p class="code">		
+			&lt;script type=&quot;text/javascript&quot;&gt;<br>
+			
+			<strong>
+			&nbsp;</strong><br>
+			<b>&nbsp;&nbsp;&nbsp;&nbsp; var message1 = &quot;Hello&quot;;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; var lastname = &quot;Anderson&quot;;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp; document.write(&quot;&lt;h1&gt;&quot;&nbsp; + message1 + &quot; &quot; + lastname + &quot;&lt;/h1&gt;&quot;);<br>
+			&lt;/script&gt;</b></p>
+			<p><b>Result:&nbsp;&nbsp; </b></p>
+			<h1>Hello Anderson</h1>
+			<p>&nbsp;</p>
+		
+		<p class="B-Head">
+		Note:&nbsp;The empty double quotations in the above example places a 
+		space between the words Hello and Anderson.&nbsp; What happens if you removed 
+		them from the example?</p>
+		<p class="B-Head">
+		<b>Practice: </b>Create two variables by the names&nbsp;cost&nbsp;and
+		<i>quantity</i>. Display the product of the two variables using the 
+		document.write method. Discuss your observations in the Discussion area.</p>
+		<p>You 
+		can change the variable's value at any point in a script by using a 
+		statement that includes the variable's name, followed by an equal sign, 
+		followed by the value you want to assign to the variable. For example 
+		you can change the value of the First and Last names in the above 
+		example.&nbsp;</p>
+		<p>
+		Assume that&nbsp; you 
+		have declared a city variable&nbsp; with a value of "<i>Las Vegas</i>", a 
+		state variable with a value of <i>"NV"</i>, and a zip variable with a 
+		value of <i>"89119"</i>, you might want to concatenate them into a 
+		single string variable named citystring.&nbsp; The statement <i>citystring = 
+		city+state+zip;</i> would return "Las VegasNV89119".&nbsp; In order to get 
+		the desired result, your statement would need to read:</p>
+		
+			<p>
+			<b><i>citystring 
+			= city + &quot;, &quot; + state + &quot; &quot; + zip;</i>.&nbsp;&nbsp;</b></p>
+		
+		<p>
+		<b>Note: </b>
+		Variable names are case sensitive.&nbsp; If you receive errors that a 
+		variable is undefined, check to ensure that the capitalization used in a 
+		specific statement is the same as when the variable was declared.&nbsp;</p>
+		<p>
+		The following chart 
+		lists the JavaScript reserved words&nbsp; These words cannot be used as 
+		variable names.&nbsp;&nbsp;&nbsp;</p>
+		<p style="text-align: center">
+		<img src="reservedword.jpg" alt="reserved"></p>
+		<p>
+	&nbsp;<b><a style="text-decoration: none" href="#top">[TOP]</a></b></p>
+		<hr />
+	
+	<h2>
+	prompt Method()</h2>
+	
+		<p>The <b>prompt() </b>
+		method collects a piece of data from the user and assigns it to a 
+		variable. The following displays the syntax of the prompt method:</p>
+		
+			<p class="code">var Variablename = 
+			prompt(&quot;Prompt&quot;, &quot;Default Value&quot;);</p>
+		
+		<p>The default value is 
+		optional, but if you decided to add a default value, the value will 
+		display in the text box automatically.&nbsp;The 
+		prompt() method is used to give the user a dialog box with a text 
+		field.&nbsp; In order to use that response in your program, you need to 
+		assign its value to a variable.&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+		<p><b>Example:&nbsp;</b> Create 
+		a prompt box that asks for the user's first name and then assigns the 
+		name to a variable named firstname.</p>
+<p>&nbsp;</p>
+		
+			
+				<p class="code">
+				
+				&lt;script 
+				type=&quot;text/javascript&quot;&gt;<br>
+				&nbsp;&nbsp;&nbsp;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp; var 
+				firstname=prompt(&quot;Enter your first name&quot;, &quot;First name&quot;);<br>
+			
+		
+		
+				<b>&lt;/script&gt; </b>
+		<p>
+		<a style="color: #2d2680" target="_blank" href="confirm.htm">
+		Click here to see the result</a></p>
+	
+	<p>Now assume that you want to 
+	take the user's first name and display a user friendly message. The 
+	following example creates a message using the visitor's first name.</p>
+	
+		
+			<p class="code">
+			&lt;script 	type=&quot;text/javascript&quot;&gt;<br>
+			&nbsp;&nbsp;&nbsp; var 
+			firstname=prompt(&quot;Enter your first name&quot;, &quot;First name&quot;);<br>
+			&nbsp;&nbsp;&nbsp; document.write(&quot;&lt;h1&gt; Hi &quot; + firstname + <br>
+			&nbsp;&nbsp;&nbsp; &quot;. Welcome to My Home&nbsp;Page. &lt;/h1&gt;&quot;);<br>
+			
+		
+			&lt;/script&gt; </p>
+			<p>
+			<a style="color: #2d2680" target="_blank" href="confirm2.htm">
+			Click here to see the result</a></p>
+		
+	
+	<p><b>Practice:&nbsp;</b></p>
+	<p>Create three prompt boxes 
+	that ask the visitors three questions.&nbsp; Display the visitor's responses in 
+	an alert box.&nbsp; Discuss your observations in Unit 3 forum of the Discussion 
+	board.</p>
+	<p>
+	&nbsp;<a style="text-decoration: none" href="#top">[TOP]</a></p>
+	<hr />
+	<h2>
+	parseInt() Method</h2>
+	
+		<p>Assume that you want to 
+		retrieve two values from the users which are declared as number1 and 
+		number2. The total variable is supposed to add up the two numbers and 
+		display it on the screen. </p>
+		
+		<p class="code">				
+					&lt;script &nbsp; 
+					type=&quot;text/javascript&quot;&gt;<br>		
+					&nbsp;&nbsp;&nbsp; var&nbsp; 
+					number1=prompt(&quot;Enter the first number&quot;, &quot;Number 1&quot;);<br>
+					&nbsp;&nbsp;&nbsp; var&nbsp; number2=prompt(&quot;Enter the second number&quot;, &quot;Number 
+					2&quot;);<br>
+					&nbsp;&nbsp;&nbsp; var total=number1+number2;<br>
+					&nbsp;&nbsp;&nbsp; document.write(number1 + &quot;+&quot; + number2 + &quot;=&quot; +&nbsp; total);<br>
+		
+					&lt;/script&gt;&nbsp;
+				<p>
+				
+				<a target="_blank" href="prompt.htm">
+				Click here to see the result.&nbsp;</a>&nbsp;</p>
+			
+		
+		Type any two numbers like 10 and 20 in 
+		the two textboxes. Does the result surprise you?&nbsp; 
+	
+	<p>&nbsp;</p>
+	<p>In this case, 
+	JavaScript does not know whether to concatenate or add the values.&nbsp; By 
+	default, JavaScript interprets any results of prompt() dialog boxes as 
+	strings.&nbsp; As a result, it will treat the two numbers as strings and 
+	concatenate them into a single string. So if you have typed 10 and 20 in the 
+	two textboxes, the result would be 1020 instead of 30.</p>
+	<p>
+	The<b> <i>parseInt()</i>
+	</b>method addresses the problem described above by instructing the 
+	JavaScript interpreter to convert the value into an integer.&nbsp; An integer is 
+	a whole number without decimal points. As you can see in the following 
+	statements, JavaScript knows that the values are numbers and that it should 
+	treat the plus sign as an addition operator, not a concatenation operator.</p>
+	<p class="code">
+
+				&lt;script 
+				type=&quot;text/javascript&quot;&gt;<br>
+
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var number1=prompt(&quot;Enter the first number&quot;, &quot;Number 1&quot;);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number1=parseInt(number1);<br>
+				
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // converts the string into an integer value<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var 
+				number2=prompt(&quot;Enter the second number&quot;, &quot;Number 2&quot;);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number2=parseInt(number2);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var 
+				total=number1+number2;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.write(number1 + &quot;+&quot; +number2 + &quot;=&quot; + total);<br>
+				
+
+				&lt;/script&gt; <br>
+				&nbsp;</p>
+			<p>
+			<a target="_blank" href="prompt2t.htm">
+			Click here to see the result.</a></p>
+		
+	
+	<p>Now, try to insert two 
+	whole numbers (numbers with decimal places) in the above textboxes. Does the 
+	total display the decimals? The answer is no, since the parseInt() method 
+	just converts the strings into whole numbers. If your numbers contain 
+	decimal places, you can use the<b> parseFloat()</b> method instead. Replace 
+	the above pareseInt() methods with the pareseFloat() methods, and discuss 
+	your observations in the Unit 2 forum of the discussion board. </p>
+	<p>Are you having fun with 
+	JavaScript? This is only the beginning . . . . .</p>
+	<br>
+&nbsp;<p>
+	&nbsp;<a style="text-decoration: none" href="#top">[TOP]</a></p>
+	<hr />
+
+</body>
+</html>

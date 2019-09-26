@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Arrays</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1 {text-align: center}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: 'courier new';
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	h1 { text-align:center}
+</style>
+
+</head>
+
+
+<h1>Arrays<a name="Arrays_"></a></h1>
+<hr>
+
+
+		<p>Assume that you live in 
+		an apartment building that contains 100 apartments. Does every apartment 
+		have a different mailing address? The answer is no, all the 100 
+		apartments have the same mailing address, but they are distinguished 
+		from each other by apartment numbers. When you write JavaScript 
+		statements, lots of times you need to create variables that have more 
+		than one member (similar to the apartment building.) In JavaScript we 
+		call this object an <b>array</b>.&nbsp;&nbsp;An 
+		array<b> </b>contains a set of data represented by a single variable 
+		name. You can think of an array as a collection of variables contained 
+		within a single variable. You use arrays when you want to store groups 
+		or lists of related information in a single, easily managed location.&nbsp;</p>
+		<p>
+		Arrays are represented in JavaScript by the&nbsp;<b>Array</b>&nbsp;object. 
+		The&nbsp;Array&nbsp;object contains a special constructor named&nbsp;Array()&nbsp;which 
+		is used for creating an array. You create new arrays by using the 
+		keyword&nbsp;new 
+		and the&nbsp;Array() constructor 
+		with the following syntax:</p>
+			
+				<p class="code">
+				<b>var variablename = new Array();</b></p>
+		
+	
+		<p>
+		Within the parentheses of the&nbsp;Array() 
+		construction, you can include an integer number that represents the number of 
+		elements to be contained in the array. Each piece of data contained in 
+		an array is called an <b>element</b>. An <b>index</b> is an element'ss 
+		position with an array. The numbering of elements within an array 
+		starts with an index number of <b>zero</b>. Most programming languages 
+		require that all of the elements in an array be of the exact same data 
+		type. However, in JavaScript the values assigned to array elements 
+		can be of different data types (although this is not recommended).</p>
+		<p><b>Example:</b></p>
+	
+		
+				<p class="code">
+				<b>var Apartment = new Array();</b></p>
+		
+	
+		<p>To refer to the members of the array 
+		you have to start with the array name followed by the index number 
+		enclosed in square brackets. For example to refer to the first member of 
+		the Apartment array you would type:</p>
+	
+		
+				<p class="code">
+				<b>Apartment[0];</b></p>
+		
+	
+		<p>Note that the term Array must be 
+		capitalized. </p>
+		<p><b>Example:</b> Create an array named 
+		Johnson. Assign the following names to the elements of the Johnson 
+		array: John, Kathy, Brian, Nicole.</p>
+		<p class="code">
+	
+		&lt;<b>script type=&quot;text/javascript&quot;&gt;</b><b><br>
+		&nbsp;&nbsp;&nbsp; var Johnson = new Array();<br>
+		&nbsp;&nbsp;&nbsp; Johnson[0]=&quot;John&quot;;<br>
+		&nbsp;&nbsp;&nbsp; Johnson[1]=&quot;Kathy&quot;;<br>
+		&nbsp;&nbsp;&nbsp; Johnson[2]=&quot;Brian&quot;;<br>
+		&nbsp;&nbsp;&nbsp; Johnson[3]=&quot;Nicole&quot;;<br>
+		&lt;/script&gt;<br>
+		&nbsp;</b></p>
+
+	<p>OR</p>
+
+		<p class="code">
+		&lt;<b>script type=&quot;text/javascript&quot;&gt;<br>
+		&nbsp;&nbsp;&nbsp; var Johnson = new Array (&quot;John&quot;,&quot;Kathy&quot;,&quot;Brian&quot;,&quot;Nicole&quot;);<br>
+		&nbsp;&nbsp;&nbsp; document.write(&quot;second member is: &quot;+ Johnson[1]);<br>
+		&lt;/script&gt;</b></p>
+
+	<p>&nbsp;</p>
+	<p><b>Practice: </b>Create an array that 
+	assigns the days of the week to the array members. Name the array 
+	&quot;Weekdays&quot;.</p>
+
+		<p class="code">
+		&lt;<b>script type=&quot;text/javascript&quot;&gt;<br>
+		&nbsp;&nbsp;&nbsp; var Weekdays = new Array (&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;,&quot;Wednesday&quot;, 
+		&quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;);<br>
+		&lt;/script&gt;
+		&nbsp;</b></p>
+
+	<p>
+	&nbsp;</p>
+	<p>
+	In JavaScript, some of the objects in the browser object 
+	model represent arrays. Some of those objects are <b>frames, forms, links,</b> 
+	and <b>images</b>.&nbsp;&nbsp; For example. the <b>images[ ] </b>array represents all the 
+	images on a Web page. The first image is represented as<b> images[0]</b>, the 
+	second image is represented as images[1], and so on. </p>
+	<p>&nbsp;<b>Discussion Topic:</b> How do you refer to the fifth 
+	image in a Web page?</p>
+	<p><b>
+	<a href="#Arrays_">[TOP]</a></b></p>
+<hr>
+	<p>&nbsp;</p>
+
+</body>
+
+</html>

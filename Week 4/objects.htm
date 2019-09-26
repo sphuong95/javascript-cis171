@@ -1,0 +1,388 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Reacting to Events</title>
+<style>
+	body{
+		font-family: arial;
+		margin-left: 6%;
+		margin-right: 5%;
+		background: url(back.jpg) left repeat-y,
+		url(back.jpg) right repeat-y;
+		
+	}
+	h1, h2, h3 {
+		color: #800000
+	}
+	p, li {
+		line-height: 1.5;
+	}
+	ul li {	
+		list-style-image: url(bul.gif);
+	}
+	ul ul li{	
+		list-style-image: url(bull2.gif);
+	}
+	hr {
+		width: 75%;
+		height: 3px;
+		background-color: silver
+	}
+	.code {
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		font-weight: bold;
+		background-color: #FFFFCC;
+		padding: 50px;
+		font-family: 'courier new';
+		font-size: 14pt;
+		background-image: url(codeback.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	.result {		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: .5in;
+		margin-bottom: .5in;
+		background-color: #FFFFCC;
+		padding: 50px;
+		background-image: url(codeback2.jpg);
+		background-size: 100% 100%;
+		background-clip: border-box
+	}
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
+	h2 { 
+		margin-top: .5in;
+	}
+	h1 { text-align:center}
+</style>
+
+</head>
+
+<body>
+<h1 style="text-align:center">
+
+Custom JavaScript Objects<br>
+<b>[<a href="#Constructor_Functions">Constructor 
+Functions</a>] | [<a href="#Properties_">Properties</a>]
+<br>
+&nbsp; [<a href="#The_prototype_Property">Prototype</a>]</b></h1>
+<hr />
+<h2 style="line-height: 150%;">
+
+Constructor Functions</h2>
+
+	<p>
+	JavaScript is 
+	not a true object-oriented programming language. 
+	You can base objects in your programs on built-in JavaScript classes such as 
+	the Array and Date 
+	objects which 
+	you will learn about in the future units.&nbsp; However, you cannot create your 
+	own classes in JavaScript. For this reason, JavaScript is said to be an <b>
+	object-based</b> programming language instead of an object-oriented 
+	programming language.</p>
+	<p>&nbsp;</p>
+	<p>
+	You can define 
+	your own <b>custom objects</b> by creating your own <b>constructor functions</b>. 
+	Constructor functions consist of properties and methods. A property of a 
+	custom object is a variable that exists within the constructor function.&nbsp;&nbsp;As 
+	with the inheritance found in traditional objects, JavaScript objects 
+	inherit all the variables and statements of the constructor function on 
+	which they are based. Any JavaScript function can serve as a constructor.&nbsp;
+	The 
+	following statements define a function named 
+	<p>
+	Employee
+	with three parameters that can serve as a constructor function:</p>
+	<p>
+	&nbsp;</p>
+	
+	<p class="code">
+			function Employee(first, last, salary) {&nbsp;&nbsp;&nbsp;&nbsp; <br>
+			. . . . . <br>
+			}</p>
+	<p>
+	You can then 
+	use the Employee constructor function to create an employee object.&nbsp; The 
+	following statement&nbsp; instantiates an instance of an 
+	Employee 
+	object:</p>
+	<p>
+	&nbsp;</p>
+	<p class="code">
+	
+	var myEmployee = <br>
+	new Employee(&quot;Thomas&quot;, &quot;Anderson&quot;, 20000);</p>
+	<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; line-height: 150%;">
+	&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>
+	
+	<b>Practice: </b>Create a constructor function named <b>Meals</b>. The 
+	function should contain three parameters by the names <i><b>breakfast</b></i>,<b><i> 
+	lunch</i></b>, and <b><i>dinner</i></b>.&nbsp; Instantiate an instance of a Meals 
+	object.</p>
+	<p>&nbsp;</p>
+	<p><b>
+	
+	Answer: </b></p>
+	
+			<p class="code">
+			function Meals(breakfast, lunch, dinner){<br>
+			&nbsp;. . . .<br>
+			}<br>
+			var&nbsp; myMeal= new Meals(&quot;Eggs&quot;, &quot;Salad&quot;, &quot;Pasta&quot;);</p>
+	
+	<p>&nbsp;</p>
+	<p>
+	As shown in the example, objects created from the Meals constructor function 
+	will have three properties. 
+	In this example, I have created a Meals object named<i> myMeal</i>, which is based 
+	on the Meals constructor function.</p>
+	<p>&nbsp;</p>
+	<p>
+	
+	<a href="#top">
+	[TOP]</a></p>
+
+<p>
+&nbsp;</p>
+<hr />
+<h2 style="line-height: 150%;">
+
+Properties</h2>
+
+	<p>
+	&nbsp;</p>
+	<p>
+	To add a 
+	property to a constructor function, you must add a statement to the function 
+	body that uses the<b> </b>
+	<b>this</b> 
+	keyword. The <b>this</b> keyword refers to the current object that calls the 
+	constructor function. The following statement shows the syntax you need to 
+	use in order to add a property to a constructor function:</p>
+	
+		<p class="code">
+		&nbsp;this.<i>propertyname </i>= <i>value</i>;</p>
+	
+	<p>&nbsp;</p>
+	<p>
+	Using the <i>
+	<b>this </b></i>keyword is the primary difference between standard and 
+	constructor functions. Standard functions don&#39;t include that <i><b>this</b></i> 
+	keyword, since the standard functions are not used to create objects. In the 
+	case of a custom JavaScript object, the <i><b>this</b></i> keyword refers to 
+	the object that calls the constructor function. </p>
+	<p>&nbsp;</p>
+	<p>
+	Example, the 
+	following constructor function includes three properties: <b>firstName</b>,<b> 
+	lastName</b>, and<b> empSalary.</b></p>
+	<p>
+	&nbsp;</p>
+	
+		<p class="code">
+			function Employee(first, last, salary) {<br>
+			&nbsp;&nbsp; this.firstName = first;<br>
+			&nbsp;&nbsp; this.lastName = last;<br>		
+			&nbsp;&nbsp; this.empSalary = salary;<br>			
+			}<br>
+			&nbsp;</p>
+	
+
+
+	<p>&nbsp;</p>
+	<p>
+	An object 
+	created with the <b>Employee </b>constructor function includes the <b>
+	firstName</b>, <b>lastName</b>, and the<b> empSalary </b>properties.&nbsp; <br>
+	&nbsp;</p>
+	<p>
+	Now assume that 
+	you want to create a new object with the Employee constructor function:</p>
+	<p>&nbsp;</p>
+	
+	<p class="code">
+		&lt;script type=&quot;text/javascript&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+			var emp123=new Employee();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		emp123.firstName=&quot;John&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emp123.lastName=&quot;Anderson&quot;;<br>
+		emp123.empSalary=40000;<br>
+			document.write(emp123.firstName +&nbsp; &quot; &quot;&nbsp; + emp123.lastName +&nbsp; 
+			&quot; , &quot;&nbsp; + emp123.empSalary);<br>
+			&lt;/script&gt;&nbsp;&nbsp;&nbsp; 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+	<p>
+	<b>&nbsp;Result:</b></p>
+	
+		<p>&nbsp; 
+		John Anderson, 40000 </p>
+	
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>
+	You can 
+	instantiate an object and assign values to its properties at the same time 
+	in a single statement. The following script can replace the above example:</p>
+	<p>&nbsp;</p>
+	
+	<p class="code">
+		&lt;script type=&quot;text/javascript&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	<br>		
+			var emp123=new Employee(&quot;John&quot;, &quot;Anderson&quot;, 40000);<br>
+		document.write(emp123.firstName + &quot; &quot; + emp123.lastName + &quot;, 
+			&quot; + emp123.empSalary);<br>
+			&lt;/script&gt;<br>
+		</p>
+	<p>
+	Now assume that 
+	you want to create a constructor function by the name <b>Course</b>.&nbsp; The <b>
+	Course</b> function needs three parameters by the names <b>name, title, </b>
+	and <b>units</b>.&nbsp; You should then create three new course objects based on 
+	the <b>Course </b>constructor function that store the information for the 
+	CIS 123, CIS 171, and CIS 223 courses.</p>
+	<p class="code">
+		&lt;script type=&quot;text/javascript&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <br>
+		function Course(name, title, units){<br>
+		&nbsp;this.courseName=name;&nbsp; <br>
+	   &nbsp;// name can be CIS 123, 223, or 171<br>
+		&nbsp;this.courseTitle=title;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+	  &nbsp;this.courseUnits=units;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+	&nbsp;// units can be 2 or 3<br>
+		}<br>
+		&lt;/script&gt;<br>
+		&lt;/head&gt;<br>
+		&lt;body&gt;<br>
+		<br>
+		&lt;script type=&quot;text/javascript&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+			var CIS123= new Course(&quot;CIS 123&quot;, &quot;Intro to HTML&quot;, 2);&nbsp;&nbsp;&nbsp;<br>
+		// instantiates an 
+		instance of the Course object<br>
+		<br>
+		var CIS223=new Course(&quot;CIS 223&quot;, &quot;DHTML&quot;, 3);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<br>
+		// instantiates the second 
+		instance of the Course object<br>
+		<br>
+		var CIS171=new Course(&quot;CIS 171&quot;, &quot;JavaScript&quot;, 2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+		<br>
+		// instantiates the third 
+		instance of the Course object <br>
+			<br>
+		document.write(&quot;The class is: &quot; + <br>
+		CIS123.courseName + &quot;, &quot; + 
+		CIS123.courseTitle + &quot;, &quot; + CIS123.courseUnits + &quot; units. &lt;br&gt;&quot;);<br>
+		<br>
+		document.write(&quot;The class is: &quot; + <br>
+		CIS223.courseName + &quot;, &quot; + 
+		CIS223.courseTitle + &quot;, &quot; + CIS223.courseUnits + &quot; units. &lt;br&gt;&quot;);<br>
+		<br>
+		document.write(&quot;The class is: &quot; + <br>
+		CIS171.courseName + &quot;, &quot; + 
+		CIS171.courseTitle + &quot;, &quot; + CIS171.courseUnits + &quot; units. &lt;br&gt;&quot;);<br>
+		&lt;/script&gt;<br>
+		. . . . . .</p>
+	<p>
+	
+	<b>Result:</b></p>The class is: CIS 123, Intro to HTML, 2 units. <br>
+	The class is: CIS 223, DHTML, 3 units. <br>
+	The class is: CIS 171, JavaScript, 2 units. <br>
+&nbsp;<p>&nbsp;</p>
+	<p>
+	
+	<a href="#top">
+	[TOP]</a></p>
+
+<hr />
+<h2 style="line-height: 150%;">
+
+The
+
+
+prototype Property</h2>
+
+	<p>
+	Objects inherit 
+	the properties and methods of the constructor functions from which they are 
+	instantiated. After instantiating a new object, you can assign additional 
+	properties to the object, using a period. The following code creates a new 
+	object based on the 
+	Employee 
+	constructor function, then assigns to the object a new property named 
+	hireDate:</p>
+
+
+	<p class="code">
+	
+	emp = new Employee(&quot;Brian&quot;, &quot;Jones&quot;, 50000);<br>	
+	emp.hireDate = &quot;June 10, 2013&quot;;</p>
+	<p>
+	
+	&nbsp;</p>
+	<p>
+	When you add a 
+	new property to an object that has been instantiated from a constructor 
+	function, the new property is only available to that specific object; the 
+	property is not available to the constructor function or to any other 
+	objects that were instantiated from the same constructor function. However, 
+	if you use the 
+	<b>prototype</b> 
+	property with the name of the constructor function, any new properties you 
+	create will also be available to the constructor function and any objects 
+	that extend it. The prototype property<b> </b>is a built-in property that 
+	specifies the constructor from which an object was extended.</p>
+	<p>&nbsp;</p>
+
+<p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Example:</b></p>
+	<p class="code">	
+	emp = new Employee(&quot;Brian&quot;, &quot;Jones&quot;, 50000);<br>
+	Employee.prototype.hireDate = &quot;June 10, 2013&quot;;</p>
+	<p>
+	&nbsp;</p>
+
+<p>
+In 
+the above example, all the employees will have a hireDate of June 10, 2013.&nbsp; 
+Since you want different employees to have different hireDate, assign an empty 
+value to the hireDate property as shown below:</p>
+
+	<p>
+	&nbsp;</p>
+	<p class="code">
+	Employee.prototype.hireDate = &quot; &quot;;</p>
+	<p>&nbsp;</p>
+	<p>
+	Object 
+	definitions can use the 
+	prototype
+	property 
+	to extend other object definitions. That is to say, you can create a new 
+	object based on an existing object. The new object inherits the properties 
+	and methods of the original object. You can then add additional properties 
+	and methods to the new object that will not be available to the existing 
+	object.</p>
+
+
+	<p>
+	
+	<a href="#top">
+	[TOP]</a></p>
+
+<hr /><br>
+&nbsp;<p>&nbsp;</p>
+
+
+
+</body>
+
+</html>

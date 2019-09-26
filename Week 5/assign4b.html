@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>assign4b.htm</title>
+        <link rel="stylesheet" type="text/css" href="assign4b.css"/>
+        <script type='text/javascript'>
+            let newId;
+            let a, b, c, d;
+            a = b = c = d = 1;
+            let description1 = "The browser object model (BOM) is a hierarchy of objects, such as window, document, forms, and etc. You can use the methods and properties of objects in the browser object model to manipulate the window, frames, and elements displayed in a Web browser.";
+            let description2 = "The Document object is the most important object in the browser object model because it represents the Web page displayed in a browser. The Document object contains all of the elements you create on a Web page."
+            let description3 = "An event is simply an occurrence that can be detected and reacted to.  In most cases, we think of events as user actions, such as clicking a button or pressing a keyboard, but certain events are built into HTML elements.  For example, there is a built-in submit event of an HTML form.";
+            let description4 = "As mentioned in the previous lecture, when an event occurs, your script executes the code that responds to that particular event. Code that executes in response to a specific event is called an event handler.";
+            let price1 = "$1000.00", price2 = "$50.00", price3 = "$5.00", price4 = "$1.00";
+            let boldDesc = "Description: ";
+            let boldPrice = "Price: ";
+            function moreInfo() {
+                let strtxt1 = document.createElement("strong");
+                let para = document.createElement("p");
+                let strtxt2 = document.createElement("strong");
+                let para2 = document.createElement("p")
+                let divObj = document.getElementById(newId);
+                let txt, txt2, strongtxt, strongtxt2;
+                divObj.appendChild(strtxt1);
+                divObj.appendChild(para);
+                divObj.appendChild(strtxt2);
+                divObj.appendChild(para2);
+                switch (newId) {
+                    case 'left1':
+                        strongtxt = document.createTextNode(boldDesc);
+                        txt = document.createTextNode(description1);
+                        strongtxt2 = document.createTextNode(boldPrice);
+                        txt2 = document.createTextNode(price1); 
+                        a = 0;
+                        break;
+                    case'left2':
+                        strongtxt = document.createTextNode(boldDesc);
+                        txt = document.createTextNode(description3);
+                        strongtxt2 = document.createTextNode(boldPrice);
+                        txt2 = document.createTextNode(price3); 
+                        b = 0;
+                        break;
+                    case'right1':
+                        strongtxt = document.createTextNode(boldDesc);
+                        txt = document.createTextNode(description2);
+                        strongtxt2 = document.createTextNode(boldPrice);
+                        txt2 = document.createTextNode(price2); 
+                        c = 0;
+                        break;
+                    case'right2': 
+                        strongtxt = document.createTextNode(boldDesc);
+                        txt = document.createTextNode(description4);
+                        strongtxt2 = document.createTextNode(boldPrice);
+                        txt2 = document.createTextNode(price4); 
+                        d = 0;
+                        break;
+                }
+                strtxt1.appendChild(strongtxt);
+                para.appendChild(txt);
+                strtxt2.appendChild(strongtxt2);
+                para2.appendChild(txt2);
+            }
+            function lessInfo() {
+                let divObj = document.getElementById(newId);
+                let deleteObj = divObj.lastChild;
+                divObj.removeChild(deleteObj);
+                deleteObj = divObj.lastChild;
+                divObj.removeChild(deleteObj);
+                deleteObj = divObj.lastChild;
+                divObj.removeChild(deleteObj);
+                deleteObj = divObj.lastChild;
+                divObj.removeChild(deleteObj);
+                switch (newId) {
+                    case 'left1':
+                        a = 1;
+                        break;
+                    case'left2':
+                        b = 1;
+                        break;
+                    case'right1':
+                        c = 1;
+                        break;
+                    case'right2': 
+                        d = 1;
+                        break;
+                }
+            }
+            function toggleInfo() {
+                if ((a == 1 && newId == 'left1')|| 
+                (b == 1 && newId =='left2') || 
+                (c == 1 && newId == 'right1') || 
+                (d == 1 && newId == 'right2')) {
+                    moreInfo();
+                }
+                else if ((a == 0 && newId == 'left1')|| 
+                (b == 0 && newId =='left2') || 
+                (c == 0 && newId == 'right1') || 
+                (d == 0 && newId == 'right2')) {
+                    lessInfo();
+                }
+            }
+            function getId(clicked) {
+                newId = clicked;
+                toggleInfo();
+            }
+        </script>
+    </head>
+    <body>
+        <header><h1>The JavaScript Shack<br></h1></header>
+        <div id="desc">Buy some Javascript Info!</div>
+        <div class="grid-container">
+            <div id="left1" onclick="getId(this.id)">
+                <h2>BOMs</h2>
+            </div>
+            <div id="right1" onclick="getId(this.id)">
+                <h2>DOMs</h2>
+            </div>
+            <div id="left2" onclick="getId(this.id)">
+                <h2>Events</h2>
+            </div>
+            <div id="right2" onclick="getId(this.id)">
+                <h2>Handlers</h2>
+            </div>
+        </div>
+    </body>
+</html>
